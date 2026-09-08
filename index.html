@@ -3,46 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Amaan & Mubashsharah — Dawat-e-Walima</title>
-  
-  <meta name="description" content="Official Wedding Invitation for the Dawat-e-Walima of Amaan Ahmad Mohd. Arif Ansari & Mubashsharah Ansari. 24 November 2026, Lucknow.">
-  <meta property="og:title" content="Amaan & Mubashsharah — Dawat-e-Walima Invitation">
+
+  <title>Amaan Ahmed Ansari & Mubashsharah Ansari — Dawat-e-Walima</title>
+
+  <meta
+    name="description"
+    content="Official Dawat-e-Walima invitation of Amaan Ahmed Ansari & Mubashsharah Ansari. Tuesday, 24th November 2026, Lucknow."
+  >
+
+  <meta property="og:title" content="Amaan Ahmed Ansari & Mubashsharah Ansari — Dawat-e-Walima">
   <meta property="og:description" content="Tuesday, 24th November 2026 | Royal Garden, Lucknow">
   <meta property="og:type" content="website">
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
-      --color-wine-deep: #2A0812;
-      --color-wine-rich: #3D0D1D;
-      --color-burgundy: #681E36;
-      --color-blush-soft: #DDA8B4;
-      --color-blush-pale: #F8EDEF;
-      --color-champagne: #F5EFEB;
-      --color-ivory: #FCFAF7;
-      
-      --color-gold-muted: #C5A467;
-      --color-gold-light: #E0C794;
-      --color-gold-dark: #8F723D;
-      --color-gold-border: rgba(197, 164, 103, 0.28);
+      --wine-deep: #2A0812;
+      --wine-rich: #3D0D1D;
+      --burgundy: #681E36;
 
-      --font-arabic: 'Amiri', serif;
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-subhead: 'Cinzel', serif;
-      --font-body: 'Montserrat', sans-serif;
+      --blush-soft: #DDA8B4;
+      --blush-pale: #F8EDEF;
+
+      --champagne: #F5EFEB;
+      --ivory: #FCFAF7;
+      --white: #FFFFFF;
+
+      --gold-muted: #C5A467;
+      --gold-light: #E0C794;
+      --gold-dark: #8F723D;
+      --gold-border: rgba(197, 164, 103, 0.28);
+
+      --font-arabic: "Amiri", serif;
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-subhead: "Cinzel", serif;
+      --font-body: "Montserrat", sans-serif;
 
       --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
       --shadow-luxury: 0 20px 50px rgba(42, 8, 18, 0.12);
       --shadow-deep: 0 25px 60px rgba(10, 2, 5, 0.35);
       --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -52,8 +67,8 @@
     html {
       font-size: 16px;
       scroll-behavior: smooth;
-      background-color: var(--color-ivory);
-      color: var(--color-wine-deep);
+      background: var(--ivory);
+      color: var(--wine-deep);
     }
 
     body {
@@ -62,6 +77,7 @@
       line-height: 1.8;
       overflow-x: hidden;
       position: relative;
+      background: var(--ivory);
     }
 
     body.locked {
@@ -70,8 +86,19 @@
     }
 
     ::selection {
-      background: var(--color-gold-muted);
-      color: var(--color-ivory);
+      background: var(--gold-muted);
+      color: var(--ivory);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
     }
 
     .container {
@@ -91,7 +118,7 @@
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.35em;
-      color: var(--color-gold-muted);
+      color: var(--gold-muted);
       margin-bottom: 0.9rem;
       display: block;
       font-weight: 500;
@@ -102,12 +129,11 @@
       font-size: clamp(2.4rem, 5vw, 4rem);
       font-weight: 400;
       line-height: 1.15;
-      color: var(--color-wine-rich);
+      color: var(--wine-rich);
       margin-bottom: 1.5rem;
     }
 
     .section-desc {
-      font-family: var(--font-body);
       font-size: clamp(0.92rem, 1.3vw, 1.05rem);
       line-height: 1.9;
       color: rgba(42, 8, 18, 0.75);
@@ -127,15 +153,19 @@
     .section-divider .line {
       width: 45px;
       height: 1px;
-      background: var(--color-gold-muted);
+      background: var(--gold-muted);
     }
 
     .section-divider .symbol {
       font-family: var(--font-display);
-      color: var(--color-gold-muted);
+      color: var(--gold-muted);
       font-size: 1.1rem;
       font-style: italic;
     }
+
+    /* ==============================
+       BUTTON
+    ============================== */
 
     .btn-lux {
       display: inline-flex;
@@ -143,38 +173,39 @@
       justify-content: center;
       gap: 0.8rem;
       padding: 1.05rem 2.2rem;
+
       font-family: var(--font-subhead);
       font-size: 0.75rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       font-weight: 500;
-      border: 1px solid var(--color-gold-muted);
+
+      border: 1px solid var(--gold-muted);
       background: transparent;
-      color: var(--color-wine-rich);
+      color: var(--wine-rich);
+
       position: relative;
       cursor: pointer;
       overflow: hidden;
       transition: all 0.5s var(--ease-luxury);
+
       z-index: 1;
       text-align: center;
-      text-decoration: none;
     }
 
     .btn-lux::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 0%;
-      height: 100%;
-      background: var(--color-wine-rich);
+      background: var(--wine-rich);
       transition: width 0.45s var(--ease-luxury);
       z-index: -1;
     }
 
     .btn-lux:hover {
-      color: var(--color-ivory);
-      border-color: var(--color-wine-rich);
+      color: var(--ivory);
+      border-color: var(--wine-rich);
       box-shadow: var(--shadow-luxury);
       transform: translateY(-2px);
     }
@@ -184,24 +215,36 @@
     }
 
     .btn-lux-filled {
-      background: var(--color-wine-rich);
-      color: var(--color-ivory);
-      border-color: var(--color-wine-rich);
+      background: var(--wine-rich);
+      color: var(--ivory);
+      border-color: var(--wine-rich);
     }
 
     .btn-lux-filled::before {
-      background: var(--color-gold-muted);
+      background: var(--gold-muted);
     }
 
     .btn-lux-filled:hover {
-      color: var(--color-wine-deep);
-      border-color: var(--color-gold-muted);
+      color: var(--wine-deep);
+      border-color: var(--gold-muted);
     }
+
+    .btn-lux:disabled {
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* ==============================
+       REVEAL ANIMATION
+    ============================== */
 
     .reveal-item {
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 1s var(--ease-luxury), transform 1s var(--ease-luxury);
+      transition:
+        opacity 1s var(--ease-luxury),
+        transform 1s var(--ease-luxury);
     }
 
     .reveal-item.is-revealed {
@@ -209,20 +252,39 @@
       transform: translateY(0);
     }
 
-    /* Veil / Opening Overlay */
+    /* ==============================
+       OPENING VEIL
+    ============================== */
+
     #opening-veil {
       position: fixed;
       inset: 0;
-      background-color: var(--color-wine-deep);
-      background-image: 
-        radial-gradient(circle at 50% 40%, rgba(104, 30, 54, 0.45), transparent 70%),
-        radial-gradient(circle at 10% 90%, rgba(197, 164, 103, 0.08), transparent 40%);
+
+      background-color: var(--wine-deep);
+
+      background-image:
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(104, 30, 54, 0.45),
+          transparent 70%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(197, 164, 103, 0.08),
+          transparent 40%
+        );
+
       z-index: 9999;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       padding: 1.5rem;
-      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 1s var(--ease-luxury);
+
+      transition:
+        transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 1s var(--ease-luxury);
     }
 
     #opening-veil.veil-opened {
@@ -233,23 +295,45 @@
 
     .veil-card {
       width: 100%;
-      max-width: 520px;
-      padding: clamp(2.5rem, 6vw, 4rem) clamp(1.8rem, 5vw, 3rem);
-      background: rgba(42, 8, 18, 0.85);
+      max-width: 540px;
+
+      padding:
+        clamp(2.5rem, 6vw, 4rem)
+        clamp(1.8rem, 5vw, 3rem);
+
+      background: rgba(42, 8, 18, 0.88);
+
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--color-gold-border);
-      border-radius: 4px;
+
+      border: 1px solid var(--gold-border);
+      border-radius: 6px;
+
       text-align: center;
-      color: var(--color-ivory);
+      color: var(--ivory);
+
       box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
+
+      animation: veilCardIn 1.2s var(--ease-luxury);
+    }
+
+    @keyframes veilCardIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .veil-monogram {
       font-family: var(--font-display);
       font-size: 2.8rem;
       letter-spacing: 0.15em;
-      color: var(--color-gold-muted);
+      color: var(--gold-muted);
       margin-bottom: 1rem;
       font-style: italic;
     }
@@ -257,7 +341,7 @@
     .veil-bismillah {
       font-family: var(--font-arabic);
       font-size: clamp(1.6rem, 4vw, 2.1rem);
-      color: var(--color-gold-light);
+      color: var(--gold-light);
       margin-bottom: 1.8rem;
       line-height: 1.6;
     }
@@ -265,14 +349,14 @@
     .veil-names {
       font-family: var(--font-display);
       font-size: clamp(1.4rem, 3.5vw, 1.85rem);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       margin-bottom: 0.8rem;
       line-height: 1.35;
     }
 
     .veil-ampersand {
       font-style: italic;
-      color: var(--color-gold-muted);
+      color: var(--gold-muted);
       margin: 0.3rem 0;
       display: block;
       font-size: 1.3rem;
@@ -282,14 +366,13 @@
       font-family: var(--font-subhead);
       font-size: 0.8rem;
       letter-spacing: 0.3em;
-      color: var(--color-blush-soft);
+      color: var(--blush-soft);
       margin-top: 1.2rem;
       margin-bottom: 0.5rem;
       text-transform: uppercase;
     }
 
     .veil-date {
-      font-family: var(--font-body);
       font-size: 0.75rem;
       letter-spacing: 0.25em;
       color: rgba(255, 255, 255, 0.6);
@@ -297,27 +380,40 @@
       text-transform: uppercase;
     }
 
-    /* Floating Navigation */
+    /* ==============================
+       NAVIGATION
+    ============================== */
+
     .site-nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 80px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 0 clamp(1.5rem, 5vw, 4rem);
+
       z-index: 100;
-      transition: background 0.4s ease, backdrop-filter 0.4s ease, height 0.4s ease;
+
+      transition:
+        background 0.4s ease,
+        backdrop-filter 0.4s ease,
+        height 0.4s ease;
     }
 
     .site-nav.scrolled {
       background: rgba(252, 250, 247, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
+
       height: 68px;
+
       box-shadow: 0 4px 25px rgba(42, 8, 18, 0.04);
+
       border-bottom: 1px solid rgba(197, 164, 103, 0.15);
     }
 
@@ -325,7 +421,7 @@
       font-family: var(--font-subhead);
       font-size: 1.1rem;
       letter-spacing: 0.2em;
-      color: var(--color-wine-rich);
+      color: var(--wine-rich);
       font-weight: 600;
     }
 
@@ -337,7 +433,9 @@
     }
 
     @media (min-width: 900px) {
-      .nav-links { display: flex; }
+      .nav-links {
+        display: flex;
+      }
     }
 
     .nav-links a {
@@ -345,37 +443,49 @@
       font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--color-wine-rich);
+      color: var(--wine-rich);
       transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
-      color: var(--color-gold-muted);
+      color: var(--gold-muted);
     }
 
-    /* Floating Audio Control */
+    /* ==============================
+       AUDIO
+    ============================== */
+
     .audio-toggle-btn {
       position: fixed;
       bottom: 25px;
       right: 25px;
+
       width: 52px;
       height: 52px;
+
       border-radius: 50%;
-      background: var(--color-wine-rich);
-      border: 1px solid var(--color-gold-muted);
-      color: var(--color-gold-light);
+
+      background: var(--wine-rich);
+      border: 1px solid var(--gold-muted);
+
+      color: var(--gold-light);
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       cursor: pointer;
+
       z-index: 95;
+
       box-shadow: var(--shadow-deep);
+
       transition: all 0.4s var(--ease-luxury);
     }
 
     .audio-toggle-btn:hover {
       transform: scale(1.08);
-      background: var(--color-wine-deep);
+      background: var(--wine-deep);
     }
 
     .audio-waves {
@@ -388,45 +498,82 @@
     .audio-bar {
       width: 2px;
       height: 4px;
-      background: var(--color-gold-light);
+      background: var(--gold-light);
       border-radius: 2px;
-      transition: height 0.2s ease;
     }
 
     .audio-toggle-btn.playing .audio-bar {
       animation: soundWave 1.2s ease-in-out infinite alternate;
     }
 
-    .audio-toggle-btn.playing .audio-bar:nth-child(2) { animation-delay: 0.2s; }
-    .audio-toggle-btn.playing .audio-bar:nth-child(3) { animation-delay: 0.4s; }
-    .audio-toggle-btn.playing .audio-bar:nth-child(4) { animation-delay: 0.6s; }
+    .audio-toggle-btn.playing .audio-bar:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .audio-toggle-btn.playing .audio-bar:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .audio-toggle-btn.playing .audio-bar:nth-child(4) {
+      animation-delay: 0.6s;
+    }
 
     @keyframes soundWave {
-      0% { height: 4px; }
-      100% { height: 16px; }
+      0% {
+        height: 4px;
+      }
+
+      100% {
+        height: 16px;
+      }
     }
 
     .scroll-progress-bar {
       position: fixed;
       top: 0;
       left: 0;
+
       height: 3px;
-      background: linear-gradient(90deg, var(--color-blush-soft), var(--color-gold-muted));
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blush-soft),
+          var(--gold-muted)
+        );
+
       width: 0%;
       z-index: 101;
     }
 
-    /* Hero */
+    /* ==============================
+       HERO
+    ============================== */
+
     .hero-section {
       min-height: 100vh;
+
       position: relative;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: clamp(6rem, 12vh, 8rem) clamp(1.2rem, 5vw, 3rem) 5rem;
-      background: radial-gradient(circle at 50% 30%, #FFF5F7 0%, var(--color-ivory) 70%);
+
+      padding:
+        clamp(6rem, 12vh, 8rem)
+        clamp(1.2rem, 5vw, 3rem)
+        5rem;
+
+      background:
+        radial-gradient(
+          circle at 50% 30%,
+          #FFF5F7 0%,
+          var(--ivory) 70%
+        );
+
       overflow: hidden;
     }
 
@@ -434,11 +581,16 @@
       position: absolute;
       top: 50%;
       left: 50%;
+
       transform: translate(-50%, -50%);
+
       font-family: var(--font-display);
       font-size: clamp(14rem, 30vw, 34rem);
+
       font-weight: 300;
+
       color: rgba(104, 30, 54, 0.03);
+
       user-select: none;
       pointer-events: none;
       z-index: 0;
@@ -447,10 +599,14 @@
     .hero-bismillah {
       font-family: var(--font-arabic);
       font-size: clamp(2rem, 5vw, 3.2rem);
-      color: var(--color-gold-dark);
+
+      color: var(--gold-dark);
+
       letter-spacing: 0.05em;
       line-height: 1.6;
+
       margin-bottom: 2rem;
+
       position: relative;
       z-index: 2;
     }
@@ -459,109 +615,158 @@
       position: relative;
       z-index: 2;
       margin-bottom: 2.5rem;
+      max-width: 1100px;
+    }
+
+    .hero-name-groom,
+    .hero-name-bride {
+      font-family: var(--font-display);
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+
+      line-height: 1.15;
     }
 
     .hero-name-groom {
-      font-family: var(--font-display);
       font-size: clamp(2rem, 5.5vw, 4.4rem);
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      color: var(--color-wine-deep);
-      line-height: 1.15;
+      color: var(--wine-deep);
+    }
+
+    .hero-name-bride {
+      font-size: clamp(1.9rem, 5.2vw, 4.1rem);
+      font-weight: 300;
+      color: var(--wine-rich);
     }
 
     .hero-ampersand-sign {
       display: block;
+
       font-family: var(--font-display);
       font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-style: italic;
-      color: var(--color-gold-muted);
-      margin: 0.4rem 0;
-    }
 
-    .hero-name-bride {
-      font-family: var(--font-display);
-      font-size: clamp(1.9rem, 5.2vw, 4.1rem);
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      color: var(--color-wine-rich);
-      line-height: 1.15;
+      font-style: italic;
+      color: var(--gold-muted);
+
+      margin: 0.4rem 0;
     }
 
     .hero-meta-badge {
       position: relative;
       z-index: 2;
-      border-top: 1px solid var(--color-gold-border);
-      border-bottom: 1px solid var(--color-gold-border);
+
+      border-top: 1px solid var(--gold-border);
+      border-bottom: 1px solid var(--gold-border);
+
       padding: 1.2rem 2.5rem;
+
       display: inline-flex;
       flex-direction: column;
       gap: 0.5rem;
+
       margin-bottom: 3rem;
+
       background: rgba(255, 255, 255, 0.4);
+
       backdrop-filter: blur(4px);
     }
 
     .hero-meta-badge .event-title {
       font-family: var(--font-subhead);
+
       font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+
       letter-spacing: 0.35em;
-      color: var(--color-burgundy);
+
+      color: var(--burgundy);
+
       text-transform: uppercase;
       font-weight: 600;
     }
 
     .hero-meta-badge .event-date-city {
-      font-family: var(--font-body);
       font-size: 0.78rem;
+
       letter-spacing: 0.3em;
+
       text-transform: uppercase;
+
       color: rgba(42, 8, 18, 0.75);
     }
 
-    /* Verse */
+    /* ==============================
+       VERSE
+    ============================== */
+
     .verse-section {
-      background: var(--color-wine-rich);
-      color: var(--color-ivory);
-      padding: clamp(5rem, 9vh, 7.5rem) 1.5rem;
+      background: var(--wine-rich);
+      color: var(--ivory);
+
+      padding:
+        clamp(5rem, 9vh, 7.5rem)
+        1.5rem;
+
       text-align: center;
       position: relative;
     }
 
     .verse-arabic {
       font-family: var(--font-arabic);
+
       font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+
       line-height: 2.2;
-      color: var(--color-gold-light);
+
+      color: var(--gold-light);
+
       margin-bottom: 2rem;
+
       max-width: 900px;
+
       margin-left: auto;
       margin-right: auto;
+
       direction: rtl;
     }
 
     .verse-translation {
       font-family: var(--font-display);
+
       font-size: clamp(1.05rem, 2vw, 1.4rem);
+
       font-style: italic;
-      color: var(--color-champagne);
+
+      color: var(--champagne);
+
       max-width: 780px;
+
       margin: 0 auto 1.5rem;
+
       line-height: 1.8;
       font-weight: 300;
     }
 
     .verse-citation {
       font-family: var(--font-subhead);
+
       font-size: 0.72rem;
+
       letter-spacing: 0.3em;
+
       text-transform: uppercase;
-      color: var(--color-blush-soft);
+
+      color: var(--blush-soft);
     }
 
-    /* Couple Section */
+    /* ==============================
+       COUPLE
+    ============================== */
+
     .couple-section {
-      padding: clamp(5rem, 10vh, 8.5rem) 0;
+      padding:
+        clamp(5rem, 10vh, 8.5rem)
+        0;
+
       background: #FDF9F8;
     }
 
@@ -587,104 +792,173 @@
     .couple-portrait-wrapper {
       width: 100%;
       max-width: 320px;
+
       aspect-ratio: 3 / 4;
+
       margin: 0 auto 2rem;
+
       position: relative;
+
       border-radius: 2px;
       overflow: hidden;
+
       box-shadow: var(--shadow-luxury);
-      border: 1px solid var(--color-gold-border);
-      background: var(--color-wine-deep);
+
+      border: 1px solid var(--gold-border);
+
+      background: var(--wine-deep);
     }
 
     .couple-portrait-placeholder {
       width: 100%;
       height: 100%;
+
       display: flex;
       flex-direction: column;
+
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--color-wine-rich), var(--color-wine-deep));
-      color: var(--color-gold-muted);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--wine-rich),
+          var(--wine-deep)
+        );
+
+      color: var(--gold-muted);
+
       padding: 1.5rem;
     }
 
     .couple-portrait-placeholder .initials {
       font-family: var(--font-display);
+
       font-size: 3.5rem;
+
       font-style: italic;
+
       line-height: 1;
+
       margin-bottom: 0.8rem;
     }
 
     .couple-card-title {
       font-family: var(--font-subhead);
+
       font-size: 0.72rem;
+
       letter-spacing: 0.3em;
+
       text-transform: uppercase;
-      color: var(--color-gold-muted);
+
+      color: var(--gold-muted);
+
       margin-bottom: 0.5rem;
     }
 
     .couple-card-name {
       font-family: var(--font-display);
+
       font-size: clamp(1.6rem, 3vw, 2.3rem);
-      color: var(--color-wine-rich);
+
+      color: var(--wine-rich);
+
       font-weight: 500;
+
       line-height: 1.25;
+
       margin-bottom: 0.8rem;
     }
 
     .couple-card-parentage {
       font-size: 0.88rem;
+
       color: rgba(42, 8, 18, 0.7);
+
       line-height: 1.6;
     }
 
     .monogram-circle {
       width: 90px;
       height: 90px;
+
       border-radius: 50%;
-      border: 1px solid var(--color-gold-muted);
+
+      border: 1px solid var(--gold-muted);
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-family: var(--font-display);
+
       font-size: 1.8rem;
+
       font-style: italic;
-      color: var(--color-gold-muted);
-      background: var(--color-ivory);
+
+      color: var(--gold-muted);
+
+      background: var(--ivory);
+
       box-shadow: var(--shadow-subtle);
+
       margin: 0 auto;
     }
 
-    /* Event Card */
+    /* ==============================
+       EVENT
+    ============================== */
+
     .events-section {
-      padding: clamp(6rem, 11vh, 9rem) 0;
-      background: var(--color-ivory);
+      padding:
+        clamp(6rem, 11vh, 9rem)
+        0;
+
+      background: var(--ivory);
     }
 
     .event-featured-card {
-      background: #FFFFFF;
-      border: 1px solid var(--color-gold-border);
+      background: var(--white);
+
+      border: 1px solid var(--gold-border);
+
       border-radius: 4px;
-      padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+
+      padding:
+        clamp(2.5rem, 6vw, 4.5rem)
+        clamp(1.5rem, 5vw, 3.5rem);
+
       box-shadow: var(--shadow-luxury);
+
       text-align: center;
+
       position: relative;
       overflow: hidden;
+
       max-width: 820px;
+
       margin: 0 auto;
     }
 
     .event-featured-card::before {
-      content: '';
+      content: "";
+
       position: absolute;
+
       top: 0;
       left: 0;
+
       width: 100%;
       height: 5px;
-      background: linear-gradient(90deg, var(--color-burgundy), var(--color-gold-muted), var(--color-burgundy));
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--burgundy),
+          var(--gold-muted),
+          var(--burgundy)
+        );
     }
 
     .event-date-display {
@@ -693,51 +967,68 @@
 
     .event-date-day {
       font-family: var(--font-display);
+
       font-size: clamp(3.5rem, 8vw, 5.5rem);
+
       line-height: 1;
-      color: var(--color-wine-rich);
+
+      color: var(--wine-rich);
+
       font-weight: 300;
     }
 
     .event-date-month {
       font-family: var(--font-subhead);
+
       font-size: clamp(0.9rem, 2vw, 1.2rem);
+
       letter-spacing: 0.35em;
+
       text-transform: uppercase;
-      color: var(--color-gold-muted);
+
+      color: var(--gold-muted);
+
       margin-top: 0.3rem;
     }
 
     .event-date-year {
-      font-family: var(--font-body);
       font-size: 0.85rem;
+
       letter-spacing: 0.25em;
+
       color: rgba(42, 8, 18, 0.5);
     }
 
-    .event-card-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-top: 2.8rem;
+    /* ==============================
+       COUNTDOWN
+    ============================== */
+
+    .countdown-section {
+      background: var(--wine-deep);
+
+      color: var(--ivory);
+
+      padding:
+        clamp(5.5rem, 10vh, 8rem)
+        1.5rem;
+
+      text-align: center;
     }
 
-    /* Countdown */
-    .countdown-section {
-      background: var(--color-wine-deep);
-      color: var(--color-ivory);
-      padding: clamp(5.5rem, 10vh, 8rem) 1.5rem;
-      text-align: center;
+    .countdown-section .section-title {
+      color: var(--ivory);
     }
 
     .countdown-grid {
       display: flex;
+
       justify-content: center;
       align-items: center;
+
       gap: clamp(1rem, 4vw, 3rem);
+
       margin-top: 3.5rem;
+
       flex-wrap: wrap;
     }
 
@@ -747,86 +1038,142 @@
 
     .countdown-number {
       font-family: var(--font-display);
+
       font-size: clamp(2.6rem, 7vw, 4.8rem);
+
       font-weight: 300;
+
       line-height: 1;
-      color: var(--color-gold-light);
+
+      color: var(--gold-light);
+
       margin-bottom: 0.4rem;
     }
 
     .countdown-label {
       font-family: var(--font-subhead);
+
       font-size: 0.68rem;
+
       letter-spacing: 0.25em;
+
       text-transform: uppercase;
-      color: var(--color-blush-soft);
+
+      color: var(--blush-soft);
     }
 
     .countdown-separator {
       font-family: var(--font-display);
+
       font-size: 2.5rem;
+
       color: rgba(197, 164, 103, 0.4);
+
       margin-top: -1.2rem;
+
       display: none;
     }
 
     @media (min-width: 600px) {
-      .countdown-separator { display: block; }
+      .countdown-separator {
+        display: block;
+      }
     }
 
-    /* Venue with provided Google Maps Link */
+    /* ==============================
+       LOCATION
+    ============================== */
+
     .venue-section {
-      padding: clamp(6rem, 11vh, 9rem) 0;
-      background: var(--color-ivory);
+      padding:
+        clamp(6rem, 11vh, 9rem)
+        0;
+
+      background: #FDF9F8;
     }
 
     .venue-card-wrapper {
-      border: 1px solid var(--color-gold-border);
-      background: #FFFFFF;
+      border: 1px solid var(--gold-border);
+
+      background: var(--white);
+
       box-shadow: var(--shadow-luxury);
+
       overflow: hidden;
+
       border-radius: 4px;
     }
 
     .venue-details-panel {
-      padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+      padding:
+        clamp(2.5rem, 6vw, 4.5rem)
+        clamp(1.5rem, 5vw, 3.5rem);
+
       text-align: center;
     }
 
     .venue-title {
       font-family: var(--font-display);
+
       font-size: clamp(2.2rem, 5vw, 3.4rem);
-      color: var(--color-wine-rich);
+
+      color: var(--wine-rich);
+
       margin-bottom: 1rem;
     }
 
     .venue-address {
       font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+
       line-height: 1.8;
+
       color: rgba(42, 8, 18, 0.75);
+
       margin-bottom: 2.2rem;
     }
 
     .venue-map-embed {
       width: 100%;
-      height: 400px;
+      height: 420px;
+
       border: 0;
+
       filter: grayscale(15%) contrast(98%);
     }
 
-    /* RSVP Form */
+    @media (max-width: 600px) {
+      .venue-map-embed {
+        height: 350px;
+      }
+    }
+
+    /* ==============================
+       RSVP
+    ============================== */
+
     .rsvp-section {
-      padding: clamp(6rem, 11vh, 9rem) 0;
-      background: var(--color-ivory);
+      padding:
+        clamp(6rem, 11vh, 9rem)
+        0;
+
+      background: var(--ivory);
     }
 
     .rsvp-card {
       max-width: 680px;
+
       margin: 0 auto;
-      background: #FFFFFF;
-      border: 1px solid var(--color-gold-border);
+
+      background: var(--white);
+
+      border: 1px solid var(--gold-border);
+
       box-shadow: var(--shadow-luxury);
-      padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+
+      padding:
+        clamp(2.5rem, 6vw, 4.5rem)
+        clamp(1.5rem, 5vw, 3.5rem);
+
       border-radius: 4px;
     }
 
@@ -837,45 +1184,85 @@
 
     .form-label {
       display: block;
+
       font-family: var(--font-subhead);
+
       font-size: 0.72rem;
+
       letter-spacing: 0.2em;
+
       text-transform: uppercase;
-      color: var(--color-wine-rich);
+
+      color: var(--wine-rich);
+
       margin-bottom: 0.6rem;
+
       font-weight: 600;
     }
 
-    .form-input, .form-select, .form-textarea {
+    .form-input,
+    .form-select,
+    .form-textarea {
       width: 100%;
+
       background: #FCFAF7;
+
       border: 1px solid rgba(197, 164, 103, 0.35);
+
       border-radius: 2px;
+
       padding: 0.95rem 1.2rem;
+
       font-size: 0.95rem;
-      color: var(--color-wine-deep);
+
+      color: var(--wine-deep);
+
       transition: all 0.3s ease;
     }
 
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
       outline: none;
-      border-color: var(--color-wine-rich);
-      background: #FFFFFF;
-      box-shadow: 0 0 0 3px rgba(104, 30, 54, 0.08);
+
+      border-color: var(--wine-rich);
+
+      background: var(--white);
+
+      box-shadow:
+        0 0 0 3px rgba(104, 30, 54, 0.08);
     }
 
     .form-radio-group {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 1rem;
+    }
+
+    @media (max-width: 520px) {
+      .form-radio-group {
+        grid-template-columns: 1fr;
+      }
     }
 
     .radio-card {
       border: 1px solid rgba(197, 164, 103, 0.35);
+
       padding: 1rem;
+
       text-align: center;
+
       cursor: pointer;
+
       transition: all 0.3s ease;
+
       background: #FCFAF7;
     }
 
@@ -884,121 +1271,296 @@
     }
 
     .radio-card.active {
-      border-color: var(--color-wine-rich);
+      border-color: var(--wine-rich);
+
       background: rgba(104, 30, 54, 0.05);
+
+      box-shadow:
+        inset 0 0 0 1px rgba(104, 30, 54, 0.08);
     }
 
     .radio-card span {
       font-family: var(--font-subhead);
+
       font-size: 0.72rem;
+
       letter-spacing: 0.15em;
+
       text-transform: uppercase;
-      color: var(--color-wine-rich);
+
+      color: var(--wine-rich);
+
       font-weight: 500;
     }
 
     .rsvp-success-message {
       display: none;
+
       text-align: center;
+
       padding: 2rem 0;
     }
 
     .rsvp-success-message.is-visible {
       display: block;
+
       animation: fadeIn 0.8s var(--ease-luxury);
+    }
+
+    .rsvp-error-message {
+      display: none;
+
+      margin-top: 1rem;
+
+      padding: 1rem;
+
+      text-align: center;
+
+      border: 1px solid rgba(104, 30, 54, 0.2);
+
+      background: rgba(104, 30, 54, 0.04);
+
+      color: var(--wine-rich);
+
+      font-size: 0.85rem;
+
+      line-height: 1.6;
+    }
+
+    .rsvp-error-message.is-visible {
+      display: block;
+
+      animation: fadeIn 0.4s ease;
     }
 
     .submit-loader {
       display: none;
+
       font-size: 0.75rem;
+
       letter-spacing: 0.2em;
+
       text-transform: uppercase;
-      color: var(--color-gold-muted);
+
+      color: var(--gold-muted);
+
       margin-top: 1rem;
+
       text-align: center;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* Footer */
+    /* ==============================
+       CLOSING
+    ============================== */
+
     .closing-section {
-      background: var(--color-wine-deep);
-      color: var(--color-ivory);
-      padding: clamp(6.5rem, 12vh, 10rem) 1.5rem 5rem;
+      background: var(--wine-deep);
+
+      color: var(--ivory);
+
+      padding:
+        clamp(6.5rem, 12vh, 10rem)
+        1.5rem
+        5rem;
+
       text-align: center;
     }
 
     .closing-eyebrow {
       font-family: var(--font-subhead);
+
       font-size: 0.75rem;
+
       letter-spacing: 0.4em;
+
       text-transform: uppercase;
-      color: var(--color-blush-soft);
+
+      color: var(--blush-soft);
+
       margin-bottom: 2rem;
     }
 
     .closing-names {
       font-family: var(--font-display);
+
       font-size: clamp(2.2rem, 5.5vw, 4.4rem);
+
       line-height: 1.25;
-      color: var(--color-ivory);
+
+      color: var(--ivory);
+
       margin-bottom: 2rem;
+
       font-weight: 400;
     }
 
     .closing-names .ampersand {
       font-style: italic;
-      color: var(--color-gold-muted);
+
+      color: var(--gold-muted);
+
       display: block;
+
       margin: 0.3rem 0;
+
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     }
 
     .closing-date {
       font-family: var(--font-subhead);
+
       font-size: 0.85rem;
+
       letter-spacing: 0.35em;
+
       text-transform: uppercase;
-      color: var(--color-gold-light);
+
+      color: var(--gold-light);
+
       margin-bottom: 2.5rem;
     }
 
     .closing-tagline {
       font-family: var(--font-display);
+
       font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+
       font-style: italic;
-      color: var(--color-blush-pale);
+
+      color: var(--blush-pale);
+
       max-width: 600px;
+
       margin: 0 auto 4rem;
+
       line-height: 1.6;
     }
 
     .site-footer {
       border-top: 1px solid rgba(197, 164, 103, 0.2);
+
       padding-top: 2rem;
+
       font-size: 0.72rem;
+
       letter-spacing: 0.25em;
+
       color: rgba(255, 255, 255, 0.4);
+
       text-transform: uppercase;
+    }
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 600px) {
+      .hero-meta-badge {
+        padding: 1.1rem 1.25rem;
+        width: min(100%, 360px);
+      }
+
+      .hero-meta-badge .event-title {
+        letter-spacing: 0.2em;
+      }
+
+      .hero-meta-badge .event-date-city {
+        letter-spacing: 0.15em;
+        line-height: 1.6;
+      }
+
+      .btn-lux {
+        width: 100%;
+      }
+
+      .event-card-actions {
+        flex-direction: column;
+      }
+
+      .audio-toggle-btn {
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .closing-date {
+        letter-spacing: 0.2em;
+        line-height: 1.7;
+      }
+
+      .site-footer {
+        letter-spacing: 0.15em;
+        line-height: 1.8;
+      }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 
 <body class="locked">
 
-  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  <!-- ==============================
+       SCROLL PROGRESS
+  ============================== -->
 
-  <!-- High-reliability wedding music stream with clean fallback -->
-  <audio id="weddingAudio" loop preload="auto">
-    <source src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_db6591201e.mp3?filename=romantic-wedding-111082.mp3" type="audio/mpeg">
-    <source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg">
+  <div
+    class="scroll-progress-bar"
+    id="scrollProgressBar"
+  ></div>
+
+
+  <!-- ==============================
+       NASHEED
+       
+       IMPORTANT:
+       Put nasheed.mp3 in the same folder
+       as index.html.
+  ============================== -->
+
+  <audio
+    id="weddingAudio"
+    loop
+    preload="auto"
+  >
+    <source
+      src="./nasheed.mp3"
+      type="audio/mpeg"
+    >
   </audio>
 
-  <!-- Floating Audio Button -->
-  <button class="audio-toggle-btn" id="audioToggleBtn" aria-label="Toggle Background Music">
+
+  <!-- ==============================
+       AUDIO CONTROL
+  ============================== -->
+
+  <button
+    class="audio-toggle-btn"
+    id="audioToggleBtn"
+    aria-label="Toggle Nasheed"
+    title="Toggle Nasheed"
+  >
     <div class="audio-waves">
       <div class="audio-bar"></div>
       <div class="audio-bar"></div>
@@ -1007,492 +1569,1627 @@
     </div>
   </button>
 
-  <!-- ==========================================================================
+
+  <!-- ==============================
        OPENING VEIL
-       ========================================================================== -->
+  ============================== -->
+
   <aside id="opening-veil">
+
     <div class="veil-card">
-      <div class="veil-monogram">A & M</div>
-      <div class="veil-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-      
-      <div class="veil-names">
-        <div>Amaan Ahmad Mohd. Arif Ansari</div>
-        <span class="veil-ampersand">&</span>
-        <div>Mubashsharah Ansari</div>
+
+      <div class="veil-monogram">
+        A & M
       </div>
 
-      <div class="veil-event">Dawat-e-Walima</div>
-      <div class="veil-date">Tuesday, 24th November 2026</div>
+      <div class="veil-bismillah">
+        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+      </div>
 
-      <button type="button" class="btn-lux btn-lux-filled" id="openInvitationBtn" style="margin-top: 1rem;">
+      <div class="veil-names">
+
+        <div>
+          Amaan Ahmed Ansari
+        </div>
+
+        <span class="veil-ampersand">
+          &
+        </span>
+
+        <div>
+          Mubashsharah Ansari
+        </div>
+
+      </div>
+
+      <div class="veil-event">
+        Dawat-e-Walima
+      </div>
+
+      <div class="veil-date">
+        Tuesday, 24th November 2026
+      </div>
+
+      <button
+        type="button"
+        class="btn-lux btn-lux-filled"
+        id="openInvitationBtn"
+        style="margin-top: 1rem;"
+      >
         Open Invitation
       </button>
+
     </div>
+
   </aside>
 
-  <!-- Navigation -->
-  <nav class="site-nav" id="siteNav">
-    <a href="#" class="nav-logo">A &times; M</a>
+
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
+
+  <nav
+    class="site-nav"
+    id="siteNav"
+  >
+
+    <a
+      href="#hero"
+      class="nav-logo"
+    >
+      A &times; M
+    </a>
+
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#couple">The Couple</a></li>
-      <li><a href="#event">Event</a></li>
-      <li><a href="#venue">Venue</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
+
+      <li>
+        <a href="#hero">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#couple">
+          The Couple
+        </a>
+      </li>
+
+      <li>
+        <a href="#event">
+          Event
+        </a>
+      </li>
+
+      <li>
+        <a href="#venue">
+          Venue
+        </a>
+      </li>
+
+      <li>
+        <a href="#rsvp">
+          RSVP
+        </a>
+      </li>
+
     </ul>
+
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-section" id="hero">
-    <div class="hero-bg-watermark">A&amp;M</div>
 
-    <div class="hero-bismillah reveal-item">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <!-- ==============================
+       HERO
+  ============================== -->
+
+  <header
+    class="hero-section"
+    id="hero"
+  >
+
+    <div class="hero-bg-watermark">
+      A&amp;M
+    </div>
+
+    <div class="hero-bismillah reveal-item">
+      بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </div>
 
     <div class="hero-couple-names reveal-item">
-      <h1 class="hero-name-groom">Amaan Ahmad Mohd. Arif Ansari</h1>
-      <span class="hero-ampersand-sign">&amp;</span>
-      <div class="hero-name-bride">Mubashsharah Ansari</div>
+
+      <h1 class="hero-name-groom">
+        Amaan Ahmed Ansari
+      </h1>
+
+      <span class="hero-ampersand-sign">
+        &amp;
+      </span>
+
+      <div class="hero-name-bride">
+        Mubashsharah Ansari
+      </div>
+
     </div>
 
     <div class="hero-meta-badge reveal-item">
-      <span class="event-title">Dawat-e-Walima</span>
-      <span class="event-date-city">24 November 2026 &bull; Lucknow</span>
+
+      <span class="event-title">
+        Dawat-e-Walima
+      </span>
+
+      <span class="event-date-city">
+        24 November 2026 &bull; Lucknow
+      </span>
+
     </div>
+
   </header>
 
-  <!-- Qur'an Verse -->
-  <section class="verse-section" id="verse">
+
+  <!-- ==============================
+       QURAN VERSE
+  ============================== -->
+
+  <section
+    class="verse-section"
+    id="verse"
+  >
+
     <div class="container container-narrow reveal-item">
+
       <div class="verse-arabic">
         وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
       </div>
+
       <p class="verse-translation">
         "And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy."
       </p>
-      <span class="verse-citation">Surah Ar-Rum &bull; 30:21</span>
+
+      <span class="verse-citation">
+        Surah Ar-Rum &bull; 30:21
+      </span>
+
     </div>
+
   </section>
 
-  <!-- The Couple -->
-  <section class="couple-section" id="couple">
+
+  <!-- ==============================
+       COUPLE
+  ============================== -->
+
+  <section
+    class="couple-section"
+    id="couple"
+  >
+
     <div class="container">
-      <div class="reveal-item" style="text-align: center; margin-bottom: 3.5rem;">
-        <span class="section-eyebrow">The Newlyweds</span>
-        <h2 class="section-title">Beginning of Forever</h2>
+
+      <div
+        class="reveal-item"
+        style="text-align:center;margin-bottom:3.5rem;"
+      >
+
+        <span class="section-eyebrow">
+          The Newlyweds
+        </span>
+
+        <h2 class="section-title">
+          Beginning of Forever
+        </h2>
+
       </div>
+
 
       <div class="couple-grid">
-        <!-- Groom Card -->
+
+        <!-- GROOM -->
+
         <div class="couple-card reveal-item">
+
           <div class="couple-portrait-wrapper">
+
             <div class="couple-portrait-placeholder">
-              <div class="initials">AA</div>
-              <span style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;">Amaan Ahmad</span>
+
+              <div class="initials">
+                AA
+              </div>
+
+              <span
+                style="
+                  font-size:0.75rem;
+                  letter-spacing:0.2em;
+                  text-transform:uppercase;
+                "
+              >
+                Amaan Ahmed
+              </span>
+
             </div>
+
           </div>
-          <span class="couple-card-title">The Groom</span>
-          <h3 class="couple-card-name">Amaan Ahmad Mohd. Arif Ansari</h3>
-          <p class="couple-card-parentage">Son of Mr. &amp; Mrs. Mohd. Arif Ansari</p>
+
+          <span class="couple-card-title">
+            The Groom
+          </span>
+
+          <h3 class="couple-card-name">
+            Amaan Ahmed Ansari
+          </h3>
+
+          <p class="couple-card-parentage">
+            Son of Mr. &amp; Mrs. Mohd. Arif Ansari
+          </p>
+
         </div>
 
-        <!-- Center Emblem -->
+
+        <!-- CENTER -->
+
         <div class="reveal-item">
-          <div class="monogram-circle">&amp;</div>
+
+          <div class="monogram-circle">
+            &amp;
+          </div>
+
         </div>
 
-        <!-- Bride Card -->
+
+        <!-- BRIDE -->
+
         <div class="couple-card reveal-item">
+
           <div class="couple-portrait-wrapper">
+
             <div class="couple-portrait-placeholder">
-              <div class="initials">MA</div>
-              <span style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;">Mubashsharah</span>
+
+              <div class="initials">
+                MA
+              </div>
+
+              <span
+                style="
+                  font-size:0.75rem;
+                  letter-spacing:0.2em;
+                  text-transform:uppercase;
+                "
+              >
+                Mubashsharah
+              </span>
+
             </div>
+
           </div>
-          <span class="couple-card-title">The Bride</span>
-          <h3 class="couple-card-name">Mubashsharah Ansari</h3>
-          <p class="couple-card-parentage">Daughter of Mr. Usman Ansari</p>
+
+          <span class="couple-card-title">
+            The Bride
+          </span>
+
+          <h3 class="couple-card-name">
+            Mubashsharah Ansari
+          </h3>
+
+          <p class="couple-card-parentage">
+            Daughter of Mr. Usman Ansari
+          </p>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- Event Details -->
-  <section class="events-section" id="event">
+
+  <!-- ==============================
+       EVENT
+       Location removed from here.
+       It appears only once below.
+  ============================== -->
+
+  <section
+    class="events-section"
+    id="event"
+  >
+
     <div class="container">
+
       <div class="event-featured-card reveal-item">
-        <span class="section-eyebrow">Celebration of Union</span>
-        <h2 class="section-title">Dawat-e-Walima</h2>
+
+        <span class="section-eyebrow">
+          Celebration of Union
+        </span>
+
+        <h2 class="section-title">
+          Dawat-e-Walima
+        </h2>
+
 
         <div class="event-date-display">
-          <div class="event-date-day">24</div>
-          <div class="event-date-month">November</div>
-          <div class="event-date-year">2026 &bull; Tuesday</div>
+
+          <div class="event-date-day">
+            24
+          </div>
+
+          <div class="event-date-month">
+            November
+          </div>
+
+          <div class="event-date-year">
+            2026 &bull; Tuesday
+          </div>
+
         </div>
+
 
         <div class="section-divider">
+
           <span class="line"></span>
-          <span class="symbol">&#10022;</span>
+
+          <span class="symbol">
+            &#10022;
+          </span>
+
           <span class="line"></span>
+
         </div>
 
-        <p style="font-family: var(--font-subhead); font-size: 1.05rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-wine-rich); margin-bottom: 0.8rem;">
+
+        <p
+          style="
+            font-family:var(--font-subhead);
+            font-size:1.05rem;
+            letter-spacing:0.2em;
+            text-transform:uppercase;
+            color:var(--wine-rich);
+            margin-bottom:0.8rem;
+          "
+        >
           8:00 PM Onwards
         </p>
 
-        <p style="font-size: 1.05rem; color: rgba(42, 8, 18, 0.75); line-height: 1.7; max-width: 500px; margin: 0 auto;">
-          <strong>Royal Garden</strong><br>
-          Mohan Road, Malihabad, District Lucknow, Uttar Pradesh
+
+        <p
+          style="
+            font-size:1rem;
+            color:rgba(42,8,18,0.65);
+            line-height:1.8;
+            max-width:500px;
+            margin:0 auto;
+          "
+        >
+          An evening of blessings, love and celebration.
         </p>
 
-        <div class="event-card-actions">
-          <a href="https://maps.app.goo.gl/ou72w28b6ZxM2JJ99" target="_blank" rel="noopener noreferrer" class="btn-lux">View Location</a>
-          <button type="button" class="btn-lux btn-lux-filled" id="addToCalendarBtn">Add to Calendar</button>
+        <div
+          class="event-card-actions"
+          style="margin-top:2.4rem;"
+        >
+
+          <button
+            type="button"
+            class="btn-lux btn-lux-filled"
+            id="addToCalendarBtn"
+          >
+            Add to Calendar
+          </button>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- Countdown -->
+
+  <!-- ==============================
+       COUNTDOWN
+  ============================== -->
+
   <section class="countdown-section">
+
     <div class="container container-narrow reveal-item">
-      <span class="section-eyebrow" style="color: var(--color-gold-light);">Anticipation</span>
-      <h2 class="section-title" style="color: var(--color-ivory);">The Celebration Begins In</h2>
-      
-      <div class="countdown-grid" id="countdownContainer">
+
+      <span
+        class="section-eyebrow"
+        style="color:var(--gold-light);"
+      >
+        Anticipation
+      </span>
+
+      <h2 class="section-title">
+        The Celebration Begins In
+      </h2>
+
+
+      <div
+        class="countdown-grid"
+        id="countdownContainer"
+      >
+
         <div class="countdown-unit">
-          <div class="countdown-number" id="cdDays">00</div>
-          <div class="countdown-label">Days</div>
+
+          <div
+            class="countdown-number"
+            id="cdDays"
+          >
+            00
+          </div>
+
+          <div class="countdown-label">
+            Days
+          </div>
+
         </div>
-        <div class="countdown-separator">:</div>
+
+
+        <div class="countdown-separator">
+          :
+        </div>
+
+
         <div class="countdown-unit">
-          <div class="countdown-number" id="cdHours">00</div>
-          <div class="countdown-label">Hours</div>
+
+          <div
+            class="countdown-number"
+            id="cdHours"
+          >
+            00
+          </div>
+
+          <div class="countdown-label">
+            Hours
+          </div>
+
         </div>
-        <div class="countdown-separator">:</div>
+
+
+        <div class="countdown-separator">
+          :
+        </div>
+
+
         <div class="countdown-unit">
-          <div class="countdown-number" id="cdMinutes">00</div>
-          <div class="countdown-label">Minutes</div>
+
+          <div
+            class="countdown-number"
+            id="cdMinutes"
+          >
+            00
+          </div>
+
+          <div class="countdown-label">
+            Minutes
+          </div>
+
         </div>
-        <div class="countdown-separator">:</div>
+
+
+        <div class="countdown-separator">
+          :
+        </div>
+
+
         <div class="countdown-unit">
-          <div class="countdown-number" id="cdSeconds">00</div>
-          <div class="countdown-label">Seconds</div>
+
+          <div
+            class="countdown-number"
+            id="cdSeconds"
+          >
+            00
+          </div>
+
+          <div class="countdown-label">
+            Seconds
+          </div>
+
         </div>
+
       </div>
-      <div id="countdownFinishedText" style="display: none; margin-top: 2rem; font-family: var(--font-display); font-size: 1.8rem; color: var(--color-gold-light);">
+
+
+      <div
+        id="countdownFinishedText"
+        style="
+          display:none;
+          margin-top:2rem;
+          font-family:var(--font-display);
+          font-size:1.8rem;
+          color:var(--gold-light);
+        "
+      >
         Today is the day. Alhamdulillah.
       </div>
+
     </div>
+
   </section>
 
-  <!-- Venue with Provided Link -->
-  <section class="venue-section" id="venue">
+
+  <!-- ==============================
+       LOCATION
+       ONLY LOCATION SECTION
+  ============================== -->
+
+  <section
+    class="venue-section"
+    id="venue"
+  >
+
     <div class="container">
+
       <div class="venue-card-wrapper reveal-item">
+
         <div class="venue-details-panel">
-          <span class="section-eyebrow">The Destination</span>
-          <h2 class="venue-title">Royal Garden</h2>
+
+          <span class="section-eyebrow">
+            The Destination
+          </span>
+
+          <h2 class="venue-title">
+            Royal Garden
+          </h2>
+
           <p class="venue-address">
             Mohan Road, Malihabad<br>
             District Lucknow, Uttar Pradesh
           </p>
-          <a href="https://maps.app.goo.gl/ou72w28b6ZxM2JJ99" target="_blank" rel="noopener noreferrer" class="btn-lux btn-lux-filled">
+
+          <a
+            href="https://maps.app.goo.gl/ou72w28b6ZxM2JJ99"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-lux btn-lux-filled"
+          >
             Open in Google Maps
           </a>
+
         </div>
-        <!-- Clean embedded location visual with direct launch trigger -->
-        <iframe 
+
+
+        <iframe
           class="venue-map-embed"
           title="Google Map of Royal Garden, Lucknow"
           src="https://maps.google.com/maps?q=Royal+Garden+Mohan+Road+Malihabad+Lucknow&t=&z=14&ie=UTF8&iwloc=&output=embed"
-          loading="lazy">
-        </iframe>
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ==========================================================================
-       RSVP SECTION WITH FORM-TO-EMAIL INTEGRATION (FormSubmit.co)
-       Delivers automatically to shaans7891@gmail.com and shaans7892@gmail.com
-       ========================================================================== -->
-  <section class="rsvp-section" id="rsvp">
+
+  <!-- ==============================
+       RSVP
+  ============================== -->
+
+  <section
+    class="rsvp-section"
+    id="rsvp"
+  >
+
     <div class="container">
+
       <div class="rsvp-card reveal-item">
+
         <div id="rsvpFormContainer">
-          <div style="text-align: center; margin-bottom: 2.5rem;">
-            <span class="section-eyebrow">Kindly Respond</span>
-            <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.8rem;">RSVP</h2>
-            <p style="font-size: 0.92rem; color: rgba(42, 8, 18, 0.7);">
+
+          <div
+            style="
+              text-align:center;
+              margin-bottom:2.5rem;
+            "
+          >
+
+            <span class="section-eyebrow">
+              Kindly Respond
+            </span>
+
+            <h2
+              class="section-title"
+              style="
+                font-size:clamp(2rem,4vw,3rem);
+                margin-bottom:0.8rem;
+              "
+            >
+              RSVP
+            </h2>
+
+            <p
+              style="
+                font-size:0.92rem;
+                color:rgba(42,8,18,0.7);
+              "
+            >
               Please grace us with your response by 10th November 2026.
             </p>
+
           </div>
 
-          <form id="weddingRsvpForm">
-            <!-- Hidden configuration fields for FormSubmit free mailing service -->
-            <input type="hidden" name="_subject" value="New Wedding RSVP: Amaan & Mubashsharah Walima">
-            <input type="hidden" name="_cc" value="shaans7892@gmail.com">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
 
-            <!-- Full Name -->
+          <form
+            id="weddingRsvpForm"
+            novalidate
+          >
+
+            <!--
+              FORM SUBMIT CONFIGURATION
+
+              Primary recipient:
+              shaans7891@gmail.com
+
+              CC recipient:
+              shaans7892@gmail.com
+            -->
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Wedding RSVP — Amaan Ahmed Ansari & Mubashsharah Ansari"
+            >
+
+            <input
+              type="hidden"
+              name="_cc"
+              value="shaans7892@gmail.com"
+            >
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            >
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            >
+
+
+            <!-- NAME -->
+
             <div class="form-group">
-              <label for="guest_name" class="form-label">Full Name</label>
-              <input type="text" id="guest_name" name="Full Name" class="form-input" placeholder="Your honorable name" required>
+
+              <label
+                for="guest_name"
+                class="form-label"
+              >
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="guest_name"
+                name="Full Name"
+                class="form-input"
+                placeholder="Your honorable name"
+                autocomplete="name"
+                required
+              >
+
             </div>
 
-            <!-- Attending Status -->
+
+            <!-- ATTENDING -->
+
             <div class="form-group">
-              <label class="form-label">Will you be attending?</label>
+
+              <label class="form-label">
+                Will you be attending?
+              </label>
+
               <div class="form-radio-group">
-                <label class="radio-card active" id="attendingYesLabel">
-                  <input type="radio" name="Attending Status" value="Accepts with Joy" checked>
-                  <span>Accepts with Joy</span>
+
+                <label
+                  class="radio-card active"
+                  id="attendingYesLabel"
+                >
+
+                  <input
+                    type="radio"
+                    name="Attending Status"
+                    value="Accepts with Joy"
+                    checked
+                  >
+
+                  <span>
+                    Accepts with Joy
+                  </span>
+
                 </label>
-                <label class="radio-card" id="attendingNoLabel">
-                  <input type="radio" name="Attending Status" value="Declines with Regret">
-                  <span>Declines with Regret</span>
+
+
+                <label
+                  class="radio-card"
+                  id="attendingNoLabel"
+                >
+
+                  <input
+                    type="radio"
+                    name="Attending Status"
+                    value="Declines with Regret"
+                  >
+
+                  <span>
+                    Declines with Regret
+                  </span>
+
                 </label>
+
               </div>
+
             </div>
 
-            <!-- Attendance Details Container -->
+
+            <!-- ATTENDANCE DETAILS -->
+
             <div id="attendanceDetailsWrapper">
-              <!-- Guest Count -->
-              <div class="form-group" id="guestsGroup">
-                <label for="guest_count" class="form-label">Number of Guests</label>
-                <select id="guest_count" name="Number of Guests" class="form-select">
-                  <option value="1 Guest">1 Guest</option>
-                  <option value="2 Guests" selected>2 Guests</option>
-                  <option value="3 Guests">3 Guests</option>
-                  <option value="4 Guests">4 Guests</option>
-                  <option value="5+ Guests (Family)">5+ Guests (Family)</option>
+
+              <!-- GUEST COUNT -->
+
+              <div
+                class="form-group"
+                id="guestsGroup"
+              >
+
+                <label
+                  for="guest_count"
+                  class="form-label"
+                >
+                  Number of Guests
+                </label>
+
+                <select
+                  id="guest_count"
+                  name="Number of Guests"
+                  class="form-select"
+                >
+
+                  <option value="1 Guest">
+                    1 Guest
+                  </option>
+
+                  <option
+                    value="2 Guests"
+                    selected
+                  >
+                    2 Guests
+                  </option>
+
+                  <option value="3 Guests">
+                    3 Guests
+                  </option>
+
+                  <option value="4 Guests">
+                    4 Guests
+                  </option>
+
+                  <option value="5+ Guests (Family)">
+                    5+ Guests (Family)
+                  </option>
+
                 </select>
+
               </div>
 
-              <!-- Dietary Preferences Selection -->
-              <div class="form-group" id="dietaryGroup">
-                <label for="guest_dietary" class="form-label">Dietary Preference</label>
-                <select id="guest_dietary" name="Dietary Preference" class="form-select">
-                  <option value="Traditional Awadhi Feast (Non-Veg & Veg Spread)">Traditional Awadhi Feast (Non-Veg &amp; Veg)</option>
-                  <option value="Pure Vegetarian">Pure Vegetarian</option>
-                  <option value="Jain Food (No Onion / Garlic)">Jain Food (No Onion &amp; Garlic)</option>
-                  <option value="No Specific Restrictions">No Dietary Restrictions</option>
+
+              <!-- DIETARY -->
+
+              <div
+                class="form-group"
+                id="dietaryGroup"
+              >
+
+                <label
+                  for="guest_dietary"
+                  class="form-label"
+                >
+                  Dietary Preference
+                </label>
+
+                <select
+                  id="guest_dietary"
+                  name="Dietary Preference"
+                  class="form-select"
+                >
+
+                  <option value="Traditional Awadhi Feast (Non-Veg & Veg Spread)">
+                    Traditional Awadhi Feast (Non-Veg &amp; Veg)
+                  </option>
+
+                  <option value="Pure Vegetarian">
+                    Pure Vegetarian
+                  </option>
+
+                  <option value="Jain Food (No Onion / Garlic)">
+                    Jain Food (No Onion &amp; Garlic)
+                  </option>
+
+                  <option value="No Specific Restrictions">
+                    No Dietary Restrictions
+                  </option>
+
                 </select>
+
               </div>
+
             </div>
 
-            <!-- Personal Message / Wishes -->
+
+            <!-- MESSAGE -->
+
             <div class="form-group">
-              <label for="guest_message" class="form-label">Warm Wishes / Message</label>
-              <textarea id="guest_message" name="Message / Wishes" class="form-textarea" rows="4" placeholder="Share your heartfelt prayers or words for the couple..."></textarea>
+
+              <label
+                for="guest_message"
+                class="form-label"
+              >
+                Warm Wishes / Message
+              </label>
+
+              <textarea
+                id="guest_message"
+                name="Message / Wishes"
+                class="form-textarea"
+                rows="4"
+                placeholder="Share your heartfelt prayers or words for the couple..."
+              ></textarea>
+
             </div>
 
-            <button type="submit" id="submitBtn" class="btn-lux btn-lux-filled" style="width: 100%;">
+
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              id="submitBtn"
+              class="btn-lux btn-lux-filled"
+              style="width:100%;"
+            >
               Send Response
             </button>
-            <div class="submit-loader" id="submitLoader">Delivering your blessings...</div>
+
+
+            <div
+              class="submit-loader"
+              id="submitLoader"
+            >
+              Delivering your blessings...
+            </div>
+
+
+            <div
+              class="rsvp-error-message"
+              id="rsvpErrorMessage"
+              role="alert"
+            >
+              We couldn't send your RSVP right now.
+              Please check your internet connection and try again.
+            </div>
+
           </form>
+
         </div>
 
-        <!-- Success Message -->
-        <div class="rsvp-success-message" id="rsvpSuccessMessage">
-          <div class="veil-monogram" style="font-size: 3rem; margin-bottom: 1rem;">Shukran</div>
-          <h3 class="section-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Response Received</h3>
-          <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(42, 8, 18, 0.85); max-width: 500px; margin: 0 auto 2rem;">
-            Your response and prayers have been emailed directly to the families. We look forward to welcoming you with warmth and affection.
-          </p>
-          <div class="section-divider">
-            <span class="line"></span>
-            <span class="symbol">&infin;</span>
-            <span class="line"></span>
+
+        <!-- SUCCESS -->
+
+        <div
+          class="rsvp-success-message"
+          id="rsvpSuccessMessage"
+        >
+
+          <div
+            class="veil-monogram"
+            style="
+              font-size:3rem;
+              margin-bottom:1rem;
+            "
+          >
+            Shukran
           </div>
+
+          <h3
+            class="section-title"
+            style="
+              font-size:2.2rem;
+              margin-bottom:1rem;
+            "
+          >
+            Response Received
+          </h3>
+
+          <p
+            style="
+              font-size:1.05rem;
+              line-height:1.9;
+              color:rgba(42,8,18,0.85);
+              max-width:500px;
+              margin:0 auto 2rem;
+            "
+          >
+            Your response and prayers have been received.
+            We look forward to welcoming you with warmth and affection.
+          </p>
+
+          <div class="section-divider">
+
+            <span class="line"></span>
+
+            <span class="symbol">
+              &infin;
+            </span>
+
+            <span class="line"></span>
+
+          </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- Closing Section -->
+
+  <!-- ==============================
+       CLOSING
+  ============================== -->
+
   <footer class="closing-section">
+
     <div class="container container-narrow reveal-item">
-      <div class="closing-eyebrow">With Love &amp; Gratitude</div>
-      <div class="closing-names">
-        Amaan Ahmad Mohd. Arif Ansari
-        <span class="ampersand">&amp;</span>
-        Mubashsharah Ansari
+
+      <div class="closing-eyebrow">
+        With Love &amp; Gratitude
       </div>
-      <div class="closing-date">24 November 2026 &bull; Lucknow</div>
+
+      <div class="closing-names">
+
+        Amaan Ahmed Ansari
+
+        <span class="ampersand">
+          &amp;
+        </span>
+
+        Mubashsharah Ansari
+
+      </div>
+
+      <div class="closing-date">
+        24 November 2026 &bull; Lucknow
+      </div>
+
       <p class="closing-tagline">
-        "We eagerly await to celebrate this milestone together with you."
+        "We eagerly await to celebrate this beautiful milestone together with you."
       </p>
+
       <div class="site-footer">
         &copy; 2026 The Ansari Families &bull; All Rights Reserved
       </div>
+
     </div>
+
   </footer>
 
-  <!-- Controller Script -->
+
+  <!-- ==============================
+       JAVASCRIPT
+  ============================== -->
+
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const veil = document.getElementById('opening-veil');
-      const openBtn = document.getElementById('openInvitationBtn');
-      const body = document.body;
-      const nav = document.getElementById('siteNav');
-      const progressBar = document.getElementById('scrollProgressBar');
-      const audioBtn = document.getElementById('audioToggleBtn');
-      const audio = document.getElementById('weddingAudio');
-      const addToCalendarBtn = document.getElementById('addToCalendarBtn');
+    document.addEventListener("DOMContentLoaded", () => {
 
-      /* Audio playback with reliable user gesture unlocked */
-      function attemptAudioPlay() {
-        audio.volume = 0.75;
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.then(() => {
-            audioBtn.classList.add('playing');
-          }).catch(error => {
-            console.log('Audio autoplay prevented or user agent restricted:', error);
-            audioBtn.classList.remove('playing');
-          });
-        }
-      }
+      /* ==============================
+         ELEMENTS
+      ============================== */
 
-      /* Invitation Veil Opening */
-      openBtn.addEventListener('click', () => {
-        veil.classList.add('veil-opened');
-        body.classList.remove('locked');
-        attemptAudioPlay();
-      });
+      const veil =
+        document.getElementById("opening-veil");
 
-      /* Audio Control Toggle */
-      audioBtn.addEventListener('click', () => {
-        if (audio.paused) {
-          attemptAudioPlay();
-        } else {
-          audio.pause();
-          audioBtn.classList.remove('playing');
-        }
-      });
+      const openBtn =
+        document.getElementById("openInvitationBtn");
 
-      /* Scroll Progress & Sticky Nav */
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrollTop / docHeight) * 100;
-        
-        progressBar.style.width = progress + '%';
+      const body =
+        document.body;
 
-        if (scrollTop > 80) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      }, { passive: true });
+      const nav =
+        document.getElementById("siteNav");
 
-      /* Scroll Observer */
-      const revealItems = document.querySelectorAll('.reveal-item');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
+      const progressBar =
+        document.getElementById("scrollProgressBar");
 
-      revealItems.forEach(item => observer.observe(item));
+      const audioBtn =
+        document.getElementById("audioToggleBtn");
 
-      /* Countdown to 24 Nov 2026, 8:00 PM IST */
-      const targetDate = new Date('2026-11-24T20:00:00+05:30').getTime();
+      const audio =
+        document.getElementById("weddingAudio");
 
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const difference = targetDate - now;
+      const addToCalendarBtn =
+        document.getElementById("addToCalendarBtn");
 
-        if (difference <= 0) {
-          document.getElementById('countdownContainer').style.display = 'none';
-          document.getElementById('countdownFinishedText').style.display = 'block';
-          return;
-        }
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      /* ==============================
+         AUDIO / NASHEED
+      ============================== */
 
-        document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
-        document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('cdMinutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('cdSeconds').textContent = String(seconds).padStart(2, '0');
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-
-      /* RSVP Attendance Toggle */
-      const yesLabel = document.getElementById('attendingYesLabel');
-      const noLabel = document.getElementById('attendingNoLabel');
-      const attendanceDetailsWrapper = document.getElementById('attendanceDetailsWrapper');
-      const rsvpForm = document.getElementById('weddingRsvpForm');
-      const formContainer = document.getElementById('rsvpFormContainer');
-      const successMessage = document.getElementById('rsvpSuccessMessage');
-      const submitBtn = document.getElementById('submitBtn');
-      const submitLoader = document.getElementById('submitLoader');
-
-      yesLabel.addEventListener('click', () => {
-        yesLabel.classList.add('active');
-        noLabel.classList.remove('active');
-        attendanceDetailsWrapper.style.display = 'block';
-      });
-
-      noLabel.addEventListener('click', () => {
-        noLabel.classList.add('active');
-        yesLabel.classList.remove('active');
-        attendanceDetailsWrapper.style.display = 'none';
-      });
-
-      /* RSVP Submission via Free FormSubmit Endpoint to shaans7891@gmail.com and shaans7892@gmail.com */
-      rsvpForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.5';
-        submitLoader.style.display = 'block';
-
-        const formData = new FormData(rsvpForm);
+      async function attemptAudioPlay() {
 
         try {
-          const response = await fetch("https://formsubmit.co/ajax/shaans7891@gmail.com", {
-            method: "POST",
-            headers: { 
-              'Accept': 'application/json'
-            },
-            body: formData
-          });
 
-          if (response.ok) {
-            formContainer.style.display = 'none';
-            successMessage.classList.add('is-visible');
-          } else {
-            // Fallback for network edge cases: confirm state so guests are never blocked
-            formContainer.style.display = 'none';
-            successMessage.classList.add('is-visible');
-          }
+          audio.volume = 0.55;
+
+          await audio.play();
+
+          audioBtn.classList.add("playing");
+
         } catch (error) {
-          console.error("Submission error:", error);
-          formContainer.style.display = 'none';
-          successMessage.classList.add('is-visible');
+
+          console.log(
+            "Nasheed playback could not start:",
+            error
+          );
+
+          audioBtn.classList.remove("playing");
+
         }
+
+      }
+
+
+      /* ==============================
+         OPEN INVITATION
+      ============================== */
+
+      openBtn.addEventListener("click", async () => {
+
+        veil.classList.add("veil-opened");
+
+        body.classList.remove("locked");
+
+        await attemptAudioPlay();
+
       });
 
-      /* Add to Calendar */
-      addToCalendarBtn.addEventListener('click', () => {
-        const calTitle = encodeURIComponent('Dawat-e-Walima: Amaan & Mubashsharah');
-        const calDetails = encodeURIComponent('We look forward to celebrating the Dawat-e-Walima of Amaan Ahmad Mohd. Arif Ansari & Mubashsharah Ansari.');
-        const calLocation = encodeURIComponent('Royal Garden, Mohan Road, Malihabad, District Lucknow, Uttar Pradesh');
-        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=20261124T143000Z/20261124T180000Z&details=${calDetails}&location=${calLocation}`;
-        window.open(gcalUrl, '_blank');
+
+      /* ==============================
+         AUDIO TOGGLE
+      ============================== */
+
+      audioBtn.addEventListener("click", async () => {
+
+        if (audio.paused) {
+
+          await attemptAudioPlay();
+
+        } else {
+
+          audio.pause();
+
+          audioBtn.classList.remove("playing");
+
+        }
+
       });
+
+
+      /* ==============================
+         SCROLL PROGRESS
+      ============================== */
+
+      function updateScrollUI() {
+
+        const scrollTop =
+          window.scrollY;
+
+        const docHeight =
+          document.documentElement.scrollHeight -
+          window.innerHeight;
+
+        const progress =
+          docHeight > 0
+            ? (scrollTop / docHeight) * 100
+            : 0;
+
+        progressBar.style.width =
+          Math.min(100, Math.max(0, progress)) + "%";
+
+
+        if (scrollTop > 80) {
+
+          nav.classList.add("scrolled");
+
+        } else {
+
+          nav.classList.remove("scrolled");
+
+        }
+
+      }
+
+
+      window.addEventListener(
+        "scroll",
+        updateScrollUI,
+        { passive: true }
+      );
+
+      updateScrollUI();
+
+
+      /* ==============================
+         REVEAL ANIMATION
+      ============================== */
+
+      const revealItems =
+        document.querySelectorAll(
+          ".reveal-item"
+        );
+
+
+      const observer =
+        new IntersectionObserver(
+          (entries) => {
+
+            entries.forEach((entry) => {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "is-revealed"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.15
+          }
+        );
+
+
+      revealItems.forEach((item) => {
+        observer.observe(item);
+      });
+
+
+      /* ==============================
+         COUNTDOWN
+         24 NOVEMBER 2026
+         8:00 PM IST
+      ============================== */
+
+      const targetDate =
+        new Date(
+          "2026-11-24T20:00:00+05:30"
+        ).getTime();
+
+
+      const cdDays =
+        document.getElementById("cdDays");
+
+      const cdHours =
+        document.getElementById("cdHours");
+
+      const cdMinutes =
+        document.getElementById("cdMinutes");
+
+      const cdSeconds =
+        document.getElementById("cdSeconds");
+
+      const countdownContainer =
+        document.getElementById(
+          "countdownContainer"
+        );
+
+      const countdownFinishedText =
+        document.getElementById(
+          "countdownFinishedText"
+        );
+
+
+      function updateCountdown() {
+
+        const now =
+          Date.now();
+
+        const difference =
+          targetDate - now;
+
+
+        if (difference <= 0) {
+
+          countdownContainer.style.display =
+            "none";
+
+          countdownFinishedText.style.display =
+            "block";
+
+          return;
+
+        }
+
+
+        const days =
+          Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+          );
+
+
+        const hours =
+          Math.floor(
+            (difference %
+              (1000 * 60 * 60 * 24)) /
+              (1000 * 60 * 60)
+          );
+
+
+        const minutes =
+          Math.floor(
+            (difference %
+              (1000 * 60 * 60)) /
+              (1000 * 60)
+          );
+
+
+        const seconds =
+          Math.floor(
+            (difference %
+              (1000 * 60)) /
+              1000
+          );
+
+
+        cdDays.textContent =
+          String(days).padStart(2, "0");
+
+        cdHours.textContent =
+          String(hours).padStart(2, "0");
+
+        cdMinutes.textContent =
+          String(minutes).padStart(2, "0");
+
+        cdSeconds.textContent =
+          String(seconds).padStart(2, "0");
+
+      }
+
+
+      updateCountdown();
+
+      setInterval(
+        updateCountdown,
+        1000
+      );
+
+
+      /* ==============================
+         RSVP RADIO CONTROLS
+      ============================== */
+
+      const yesLabel =
+        document.getElementById(
+          "attendingYesLabel"
+        );
+
+      const noLabel =
+        document.getElementById(
+          "attendingNoLabel"
+        );
+
+      const attendanceDetailsWrapper =
+        document.getElementById(
+          "attendanceDetailsWrapper"
+        );
+
+
+      yesLabel.addEventListener(
+        "click",
+        () => {
+
+          yesLabel.classList.add("active");
+
+          noLabel.classList.remove("active");
+
+          attendanceDetailsWrapper.style.display =
+            "block";
+
+        }
+      );
+
+
+      noLabel.addEventListener(
+        "click",
+        () => {
+
+          noLabel.classList.add("active");
+
+          yesLabel.classList.remove("active");
+
+          attendanceDetailsWrapper.style.display =
+            "none";
+
+        }
+      );
+
+
+      /* ==============================
+         RSVP FORM
+         
+         PRIMARY:
+         shaans7891@gmail.com
+
+         CC:
+         shaans7892@gmail.com
+      ============================== */
+
+      const rsvpForm =
+        document.getElementById(
+          "weddingRsvpForm"
+        );
+
+      const formContainer =
+        document.getElementById(
+          "rsvpFormContainer"
+        );
+
+      const successMessage =
+        document.getElementById(
+          "rsvpSuccessMessage"
+        );
+
+      const submitBtn =
+        document.getElementById(
+          "submitBtn"
+        );
+
+      const submitLoader =
+        document.getElementById(
+          "submitLoader"
+        );
+
+      const errorMessage =
+        document.getElementById(
+          "rsvpErrorMessage"
+        );
+
+
+      rsvpForm.addEventListener(
+        "submit",
+        async (e) => {
+
+          e.preventDefault();
+
+
+          /* Hide previous error */
+
+          errorMessage.classList.remove(
+            "is-visible"
+          );
+
+
+          /* Validate */
+
+          if (!rsvpForm.checkValidity()) {
+
+            rsvpForm.reportValidity();
+
+            return;
+
+          }
+
+
+          /* Loading state */
+
+          submitBtn.disabled = true;
+
+          submitBtn.style.opacity = "0.6";
+
+          submitLoader.style.display =
+            "block";
+
+
+          const formData =
+            new FormData(rsvpForm);
+
+
+          try {
+
+            const response =
+              await fetch(
+                "https://formsubmit.co/ajax/shaans7891@gmail.com",
+                {
+                  method: "POST",
+
+                  headers: {
+                    "Accept":
+                      "application/json"
+                  },
+
+                  body: formData
+                }
+              );
+
+
+            let result = null;
+
+
+            try {
+
+              result =
+                await response.json();
+
+            } catch (_) {
+
+              result = null;
+
+            }
+
+
+            /*
+              Only show success if
+              FormSubmit actually responds
+              successfully.
+            */
+
+            if (
+              response.ok &&
+              (!result ||
+                result.success !== false)
+            ) {
+
+              formContainer.style.display =
+                "none";
+
+              successMessage.classList.add(
+                "is-visible"
+              );
+
+              return;
+
+            }
+
+
+            throw new Error(
+              result?.message ||
+              "RSVP submission failed."
+            );
+
+
+          } catch (error) {
+
+            console.error(
+              "RSVP submission error:",
+              error
+            );
+
+
+            submitBtn.disabled = false;
+
+            submitBtn.style.opacity = "1";
+
+            submitLoader.style.display =
+              "none";
+
+
+            errorMessage.classList.add(
+              "is-visible"
+            );
+
+          }
+
+        }
+      );
+
+
+      /* ==============================
+         GOOGLE CALENDAR
+      ============================== */
+
+      addToCalendarBtn.addEventListener(
+        "click",
+        () => {
+
+          const calTitle =
+            encodeURIComponent(
+              "Dawat-e-Walima: Amaan Ahmed Ansari & Mubashsharah Ansari"
+            );
+
+
+          const calDetails =
+            encodeURIComponent(
+              "We look forward to celebrating the Dawat-e-Walima of Amaan Ahmed Ansari & Mubashsharah Ansari."
+            );
+
+
+          const calLocation =
+            encodeURIComponent(
+              "Royal Garden, Mohan Road, Malihabad, District Lucknow, Uttar Pradesh"
+            );
+
+
+          /*
+            8:00 PM IST = 14:30 UTC
+            Event is scheduled for 3.5 hours.
+          */
+
+          const gcalUrl =
+            "https://calendar.google.com/calendar/render" +
+            "?action=TEMPLATE" +
+            "&text=" + calTitle +
+            "&dates=20261124T143000Z/20261124T180000Z" +
+            "&details=" + calDetails +
+            "&location=" + calLocation;
+
+
+          window.open(
+            gcalUrl,
+            "_blank",
+            "noopener,noreferrer"
+          );
+
+        }
+      );
+
+
+      /* ==============================
+         SMOOTH NAVIGATION
+      ============================== */
+
+      document
+        .querySelectorAll(".nav-links a")
+        .forEach((link) => {
+
+          link.addEventListener(
+            "click",
+            (e) => {
+
+              const targetId =
+                link.getAttribute("href");
+
+              if (
+                targetId &&
+                targetId.startsWith("#")
+              ) {
+
+                const target =
+                  document.querySelector(
+                    targetId
+                  );
+
+                if (target) {
+
+                  e.preventDefault();
+
+                  target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                  });
+
+                }
+
+              }
+
+            }
+          );
+
+        });
+
     });
   </script>
+
 </body>
 </html>
