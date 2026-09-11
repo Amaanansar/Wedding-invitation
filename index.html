@@ -875,6 +875,18 @@
       margin-bottom: 0.5rem;
     }
 
+    .couple-portrait-placeholder .initials {
+      width: 76px;
+      height: 76px;
+      border: 1px solid rgba(197, 164, 103, 0.65);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(252, 250, 247, 0.06);
+      box-shadow: 0 8px 25px rgba(10, 2, 5, 0.16);
+    }
+
     .couple-card-title {
       font-family: var(--font-subhead);
 
@@ -1112,6 +1124,126 @@
       .countdown-separator {
         display: block;
       }
+    }
+
+    .rsvp-invitation-note {
+      margin: -0.8rem 0 2rem;
+      padding: 0.9rem 1rem;
+      border-left: 2px solid var(--gold-muted);
+      background: rgba(197, 164, 103, 0.07);
+      color: rgba(42, 8, 18, 0.68);
+      font-size: 0.82rem;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    /* ==============================
+       SAVE THE DATE — SCRATCH CARD
+    ============================== */
+
+    .save-date-section {
+      padding: clamp(5.5rem, 10vh, 8rem) 1.5rem;
+      background: transparent;
+      text-align: center;
+    }
+
+    .scratch-card-shell {
+      width: min(100%, 680px);
+      margin: 2.5rem auto 0;
+    }
+
+    .scratch-card {
+      position: relative;
+      min-height: 310px;
+      border: 1px solid var(--gold-border);
+      border-radius: 14px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255,255,255,0.78), transparent 58%),
+        linear-gradient(135deg, #F8EDEF 0%, #F3E4E0 48%, #EBD8D2 100%);
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .scratch-reveal {
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: var(--wine-deep);
+    }
+
+    .scratch-kicker {
+      font-family: var(--font-subhead);
+      font-size: 0.68rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 1rem;
+    }
+
+    .scratch-date {
+      font-family: var(--font-display);
+      font-size: clamp(4.5rem, 13vw, 7rem);
+      line-height: 0.85;
+      font-weight: 300;
+      color: var(--wine-rich);
+    }
+
+    .scratch-month {
+      font-family: var(--font-subhead);
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-top: 0.9rem;
+    }
+
+    .scratch-details {
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(42, 8, 18, 0.65);
+    }
+
+    #scratchCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+      cursor: crosshair;
+      transition: opacity 0.8s var(--ease-luxury);
+    }
+
+    .scratch-card.is-revealed #scratchCanvas {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .scratch-hint {
+      position: absolute;
+      left: 50%;
+      bottom: 1.5rem;
+      transform: translateX(-50%);
+      z-index: 2;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 999px;
+      background: rgba(42, 8, 18, 0.72);
+      color: var(--ivory);
+      font-family: var(--font-subhead);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .scratch-card.is-revealed .scratch-hint {
+      opacity: 0;
     }
 
     /* ==============================
@@ -1705,6 +1837,12 @@
       </li>
 
       <li>
+        <a href="#save-date">
+          Save the Date
+        </a>
+      </li>
+
+      <li>
         <a href="#rsvp">
           RSVP
         </a>
@@ -2011,6 +2149,73 @@
           >
             Add to Calendar
           </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==============================
+       SAVE THE DATE — SCRATCH REVEAL
+  ============================== -->
+
+  <section
+    class="save-date-section"
+    id="save-date"
+  >
+
+    <div class="container container-narrow reveal-item">
+
+      <span class="section-eyebrow">
+        A Little Surprise
+      </span>
+
+      <h2 class="section-title">
+        Save the Date
+      </h2>
+
+      <p class="section-desc">
+        Scratch below to reveal the date of our celebration.
+      </p>
+
+      <div class="scratch-card-shell">
+
+        <div
+          class="scratch-card"
+          id="scratchCard"
+          aria-label="Scratch card revealing the Walima date"
+        >
+
+          <div class="scratch-reveal">
+            <span class="scratch-kicker">
+              Dawat-e-Walima
+            </span>
+
+            <div class="scratch-date">
+              24
+            </div>
+
+            <div class="scratch-month">
+              November 2026
+            </div>
+
+            <div class="scratch-details">
+              Tuesday &nbsp;&bull;&nbsp; 8:00 PM Onwards
+            </div>
+          </div>
+
+          <canvas
+            id="scratchCanvas"
+            aria-label="Scratch here to reveal the date"
+          ></canvas>
+
+          <div class="scratch-hint">
+            ✦ Scratch to reveal ✦
+          </div>
 
         </div>
 
@@ -2363,59 +2568,13 @@
 
             </div>
 
+            <!-- INVITATION NOTE -->
 
-            <!-- ATTENDANCE DETAILS -->
-
-            <div id="attendanceDetailsWrapper">
-
-              <!-- GUEST COUNT -->
-
-              <div
-                class="form-group"
-                id="guestsGroup"
-              >
-
-                <label
-                  for="guest_count"
-                  class="form-label"
-                >
-                  Number of Guests
-                </label>
-
-                <select
-                  id="guest_count"
-                  name="Number of Guests"
-                  class="form-select"
-                >
-
-                  <option value="1 Guest">
-                    1 Guest
-                  </option>
-
-                  <option
-                    value="2 Guests"
-                    selected
-                  >
-                    2 Guests
-                  </option>
-
-                  <option value="3 Guests">
-                    3 Guests
-                  </option>
-
-                  <option value="4 Guests">
-                    4 Guests
-                  </option>
-
-                  <option value="5+ Guests (Family)">
-                    5+ Guests (Family)
-                  </option>
-
-                </select>
-
-              </div>
-
-            </div>
+            <p
+              class="rsvp-invitation-note"
+            >
+              Please respond according to the invitation you received.
+            </p>
 
 
             <!-- MESSAGE -->
@@ -2763,6 +2922,157 @@
 
 
       /* ==============================
+         SAVE THE DATE — SCRATCH CARD
+      ============================== */
+
+      const scratchCard =
+        document.getElementById("scratchCard");
+
+      const scratchCanvas =
+        document.getElementById("scratchCanvas");
+
+      if (scratchCard && scratchCanvas) {
+
+        const scratchCtx =
+          scratchCanvas.getContext("2d", { willReadFrequently: true });
+
+        let scratching = false;
+        let revealed = false;
+        let lastPoint = null;
+
+        function setupScratchCanvas() {
+
+          const rect = scratchCard.getBoundingClientRect();
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+          scratchCanvas.width = Math.max(1, Math.round(rect.width * dpr));
+          scratchCanvas.height = Math.max(1, Math.round(rect.height * dpr));
+          scratchCanvas.style.width = rect.width + "px";
+          scratchCanvas.style.height = rect.height + "px";
+
+          scratchCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+          const gradient = scratchCtx.createLinearGradient(0, 0, rect.width, rect.height);
+          gradient.addColorStop(0, "#BFAF9B");
+          gradient.addColorStop(0.5, "#D8C9B8");
+          gradient.addColorStop(1, "#A99682");
+
+          scratchCtx.globalCompositeOperation = "source-over";
+          scratchCtx.fillStyle = gradient;
+          scratchCtx.fillRect(0, 0, rect.width, rect.height);
+
+          scratchCtx.fillStyle = "rgba(42, 8, 18, 0.22)";
+          scratchCtx.font = "500 13px Montserrat, sans-serif";
+          scratchCtx.textAlign = "center";
+          scratchCtx.textBaseline = "middle";
+          scratchCtx.fillText("SCRATCH TO REVEAL", rect.width / 2, rect.height / 2 - 8);
+          scratchCtx.font = "italic 18px 'Cormorant Garamond', serif";
+          scratchCtx.fillText("A special date awaits", rect.width / 2, rect.height / 2 + 18);
+
+          scratchCtx.globalCompositeOperation = "destination-out";
+          lastPoint = null;
+          revealed = false;
+          scratchCard.classList.remove("is-revealed");
+        }
+
+        function getPoint(event) {
+          const rect = scratchCanvas.getBoundingClientRect();
+          return {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
+          };
+        }
+
+        function scratchAt(point) {
+          if (revealed) return;
+
+          scratchCtx.lineCap = "round";
+          scratchCtx.lineJoin = "round";
+          scratchCtx.lineWidth = 46;
+          scratchCtx.strokeStyle = "rgba(0,0,0,1)";
+
+          scratchCtx.beginPath();
+
+          if (lastPoint) {
+            scratchCtx.moveTo(lastPoint.x, lastPoint.y);
+            scratchCtx.lineTo(point.x, point.y);
+          } else {
+            scratchCtx.moveTo(point.x, point.y);
+            scratchCtx.lineTo(point.x + 0.01, point.y + 0.01);
+          }
+
+          scratchCtx.stroke();
+          lastPoint = point;
+        }
+
+        function checkScratchProgress() {
+          if (revealed || scratchCanvas.width < 10 || scratchCanvas.height < 10) return;
+
+          const sampleWidth = Math.max(1, Math.floor(scratchCanvas.width / 8));
+          const sampleHeight = Math.max(1, Math.floor(scratchCanvas.height / 8));
+          const image = scratchCtx.getImageData(0, 0, scratchCanvas.width, scratchCanvas.height);
+          let transparent = 0;
+          let total = 0;
+
+          for (let y = 0; y < scratchCanvas.height; y += sampleHeight) {
+            for (let x = 0; x < scratchCanvas.width; x += sampleWidth) {
+              const index = (y * scratchCanvas.width + x) * 4 + 3;
+              total++;
+              if (image.data[index] < 40) transparent++;
+            }
+          }
+
+          if (total && transparent / total >= 0.55) {
+            revealed = true;
+            scratchCard.classList.add("is-revealed");
+          }
+        }
+
+        scratchCanvas.addEventListener("pointerdown", (event) => {
+          if (revealed) return;
+          scratching = true;
+          scratchCanvas.setPointerCapture?.(event.pointerId);
+          lastPoint = getPoint(event);
+          scratchAt(lastPoint);
+          event.preventDefault();
+        });
+
+        scratchCanvas.addEventListener("pointermove", (event) => {
+          if (!scratching || revealed) return;
+          scratchAt(getPoint(event));
+          event.preventDefault();
+        });
+
+        const stopScratching = () => {
+          if (!scratching) return;
+          scratching = false;
+          lastPoint = null;
+          checkScratchProgress();
+        };
+
+        scratchCanvas.addEventListener("pointerup", stopScratching);
+        scratchCanvas.addEventListener("pointercancel", stopScratching);
+        scratchCanvas.addEventListener("pointerleave", () => {
+          if (scratching) {
+            scratching = false;
+            lastPoint = null;
+            checkScratchProgress();
+          }
+        });
+
+        window.addEventListener("resize", () => {
+          if (!revealed) setupScratchCanvas();
+        });
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          setupScratchCanvas();
+        } else {
+          setupScratchCanvas();
+        }
+      }
+
+
+      /* ==============================
          COUNTDOWN
          24 NOVEMBER 2026
          8:00 PM IST
@@ -2887,40 +3197,25 @@
           "attendingNoLabel"
         );
 
-      const attendanceDetailsWrapper =
-        document.getElementById(
-          "attendanceDetailsWrapper"
-        );
+      function syncAttendanceState() {
+
+        const selected =
+          document.querySelector(
+            'input[name="Attending Status"]:checked'
+          );
+
+        const isYes =
+          selected?.value === "Accepts with Joy";
+
+        yesLabel.classList.toggle("active", isYes);
+        noLabel.classList.toggle("active", !isYes);
+
+      }
 
 
-      yesLabel.addEventListener(
-        "click",
-        () => {
-
-          yesLabel.classList.add("active");
-
-          noLabel.classList.remove("active");
-
-          attendanceDetailsWrapper.style.display =
-            "block";
-
-        }
-      );
-
-
-      noLabel.addEventListener(
-        "click",
-        () => {
-
-          noLabel.classList.add("active");
-
-          yesLabel.classList.remove("active");
-
-          attendanceDetailsWrapper.style.display =
-            "none";
-
-        }
-      );
+      yesLabel.addEventListener("click", syncAttendanceState);
+      noLabel.addEventListener("click", syncAttendanceState);
+      syncAttendanceState();
 
 
       /* ==============================
