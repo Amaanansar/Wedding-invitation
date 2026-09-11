@@ -452,16 +452,34 @@
     }
 
     .nav-links a {
+      position: relative;
       font-family: var(--font-subhead);
       font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--wine-rich);
       transition: color 0.3s ease;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background: var(--gold-muted);
+      transition: width 0.35s var(--ease-luxury), left 0.35s var(--ease-luxury);
     }
 
     .nav-links a:hover {
       color: var(--gold-muted);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+      left: 0%;
     }
 
     /* ==============================
@@ -560,6 +578,48 @@
     }
 
     /* ==============================
+       FLOATING ORNAMENTS
+    ============================== */
+
+    #floatingOrnaments {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .ornament {
+      position: absolute;
+      top: -5vh;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, var(--gold-light), var(--gold-muted) 65%, transparent 75%);
+      opacity: 0.55;
+      filter: blur(0.2px);
+      animation-name: ornamentDrift;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      will-change: transform;
+    }
+
+    .ornament.sparkle {
+      background: none;
+      color: var(--gold-muted);
+      font-family: var(--font-display);
+      font-style: italic;
+      opacity: 0.5;
+    }
+
+    @keyframes ornamentDrift {
+      from {
+        transform: translate3d(0, -8vh, 0) rotate(0deg);
+      }
+      to {
+        transform: translate3d(0, 108vh, 0) rotate(360deg);
+      }
+    }
+
+    /* ==============================
        HERO
     ============================== */
 
@@ -613,6 +673,8 @@
       user-select: none;
       pointer-events: none;
       z-index: 0;
+
+      transition: transform 0.1s linear;
     }
 
     .hero-bismillah {
@@ -668,6 +730,13 @@
       color: var(--gold-muted);
 
       margin: 0.4rem 0;
+      display: inline-block;
+      animation: ampersandFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes ampersandFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(-3deg); }
     }
 
     .hero-meta-badge {
@@ -688,6 +757,13 @@
       background: rgba(255, 255, 255, 0.4);
 
       backdrop-filter: blur(4px);
+
+      transition: box-shadow 0.4s var(--ease-luxury), transform 0.4s var(--ease-luxury);
+    }
+
+    .hero-meta-badge:hover {
+      box-shadow: var(--shadow-luxury);
+      transform: translateY(-3px);
     }
 
     .hero-meta-badge .event-title {
@@ -713,6 +789,54 @@
       color: rgba(42, 8, 18, 0.75);
     }
 
+    .scroll-cue {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      opacity: 0.75;
+      transition: opacity 0.4s ease;
+      background: none;
+      border: none;
+    }
+
+    .scroll-cue:hover {
+      opacity: 1;
+    }
+
+    .scroll-cue span {
+      font-family: var(--font-subhead);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--wine-rich);
+    }
+
+    .scroll-cue-arrow {
+      width: 14px;
+      height: 14px;
+      border-right: 1px solid var(--gold-muted);
+      border-bottom: 1px solid var(--gold-muted);
+      transform: rotate(45deg);
+      animation: scrollBounce 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: rotate(45deg) translate(0, 0); opacity: 0.5; }
+      50% { transform: rotate(45deg) translate(4px, 4px); opacity: 1; }
+    }
+
+    .scroll-cue.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     /* ==============================
        VERSE
     ============================== */
@@ -727,6 +851,7 @@
 
       text-align: center;
       position: relative;
+      overflow: hidden;
     }
 
     .verse-arabic {
@@ -746,6 +871,8 @@
       margin-right: auto;
 
       direction: rtl;
+
+      transition: transform 0.1s linear;
     }
 
     .verse-translation {
@@ -819,6 +946,7 @@
     .couple-card {
       text-align: center;
       padding: clamp(1rem, 3vw, 2.5rem);
+      transition: transform 0.45s var(--ease-luxury);
     }
 
     .couple-portrait-wrapper {
@@ -839,6 +967,14 @@
       border: 1px solid var(--gold-border);
 
       background: var(--wine-deep);
+
+      transform-style: preserve-3d;
+      transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s ease;
+      will-change: transform;
+    }
+
+    .couple-portrait-wrapper:hover {
+      box-shadow: 0 30px 60px rgba(42, 8, 18, 0.28);
     }
 
     .couple-portrait-placeholder {
@@ -885,6 +1021,11 @@
       justify-content: center;
       background: rgba(252, 250, 247, 0.06);
       box-shadow: 0 8px 25px rgba(10, 2, 5, 0.16);
+      transition: transform 0.4s var(--ease-luxury);
+    }
+
+    .couple-portrait-wrapper:hover .initials {
+      transform: scale(1.08) rotate(3deg);
     }
 
     .couple-card-title {
@@ -948,6 +1089,13 @@
       box-shadow: var(--shadow-subtle);
 
       margin: 0 auto;
+
+      animation: monogramPulse 3.5s ease-in-out infinite;
+    }
+
+    @keyframes monogramPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(197, 164, 103, 0.25); }
+      50% { box-shadow: 0 0 0 12px rgba(197, 164, 103, 0); }
     }
 
     /* ==============================
@@ -985,6 +1133,13 @@
       max-width: 820px;
 
       margin: 0 auto;
+
+      transition: transform 0.5s var(--ease-luxury), box-shadow 0.5s var(--ease-luxury);
+    }
+
+    .event-featured-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 70px rgba(42, 8, 18, 0.18);
     }
 
     .event-featured-card::before {
@@ -1005,6 +1160,14 @@
           var(--gold-muted),
           var(--burgundy)
         );
+
+      background-size: 200% 100%;
+      animation: shimmerLine 5s linear infinite;
+    }
+
+    @keyframes shimmerLine {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
     }
 
     .event-date-display {
@@ -1043,6 +1206,20 @@
       letter-spacing: 0.25em;
 
       color: rgba(42, 8, 18, 0.5);
+    }
+
+    .section-divider .symbol {
+      display: inline-block;
+      transition: transform 0.6s var(--ease-luxury);
+    }
+
+    .section-divider.is-revealed .symbol {
+      animation: diamondSpin 1.2s var(--ease-luxury);
+    }
+
+    @keyframes diamondSpin {
+      from { transform: rotate(-180deg) scale(0.4); opacity: 0; }
+      to { transform: rotate(0deg) scale(1); opacity: 1; }
     }
 
     /* ==============================
@@ -1094,6 +1271,18 @@
       color: var(--gold-light);
 
       margin-bottom: 0.4rem;
+
+      display: inline-block;
+    }
+
+    .countdown-number.tick {
+      animation: countdownTick 0.5s var(--ease-luxury);
+    }
+
+    @keyframes countdownTick {
+      0% { transform: translateY(-10px); opacity: 0; }
+      60% { transform: translateY(2px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 1; }
     }
 
     .countdown-label {
@@ -1162,6 +1351,11 @@
         radial-gradient(circle at 50% 20%, rgba(255,255,255,0.78), transparent 58%),
         linear-gradient(135deg, #F8EDEF 0%, #F3E4E0 48%, #EBD8D2 100%);
       box-shadow: var(--shadow-luxury);
+      transition: box-shadow 0.5s ease;
+    }
+
+    .scratch-card.is-revealed {
+      box-shadow: 0 30px 70px rgba(197, 164, 103, 0.35);
     }
 
     .scratch-reveal {
@@ -1189,6 +1383,16 @@
       line-height: 0.85;
       font-weight: 300;
       color: var(--wine-rich);
+    }
+
+    .scratch-card.is-revealed .scratch-date {
+      animation: scratchDatePop 0.7s var(--ease-luxury);
+    }
+
+    @keyframes scratchDatePop {
+      0% { transform: scale(0.7); opacity: 0; }
+      70% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); }
     }
 
     .scratch-month {
@@ -1240,6 +1444,12 @@
       text-transform: uppercase;
       pointer-events: none;
       transition: opacity 0.5s ease;
+      animation: hintPulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes hintPulse {
+      0%, 100% { opacity: 0.75; transform: translateX(-50%) scale(1); }
+      50% { opacity: 1; transform: translateX(-50%) scale(1.04); }
     }
 
     .scratch-card.is-revealed .scratch-hint {
@@ -1270,6 +1480,12 @@
       overflow: hidden;
 
       border-radius: 4px;
+
+      transition: box-shadow 0.5s var(--ease-luxury);
+    }
+
+    .venue-card-wrapper:hover {
+      box-shadow: 0 30px 70px rgba(42, 8, 18, 0.18);
     }
 
     .venue-details-panel {
@@ -1307,6 +1523,11 @@
       border: 0;
 
       filter: grayscale(15%) contrast(98%);
+      transition: filter 0.5s ease;
+    }
+
+    .venue-map-embed:hover {
+      filter: grayscale(0%) contrast(100%);
     }
 
     @media (max-width: 600px) {
@@ -1345,6 +1566,8 @@
         clamp(1.5rem, 5vw, 3.5rem);
 
       border-radius: 4px;
+      position: relative;
+      overflow: hidden;
     }
 
     .form-group {
@@ -1406,6 +1629,8 @@
 
       box-shadow:
         0 0 0 3px rgba(104, 30, 54, 0.08);
+
+      transform: translateY(-1px);
     }
 
     .form-radio-group {
@@ -1434,6 +1659,11 @@
       transition: all 0.3s ease;
 
       background: #FCFAF7;
+    }
+
+    .radio-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(42, 8, 18, 0.08);
     }
 
     .radio-card input {
@@ -1528,6 +1758,34 @@
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    /* Confetti / petal burst for RSVP success */
+    .petal-burst {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 3;
+    }
+
+    .petal-piece {
+      position: absolute;
+      top: -10%;
+      border-radius: 50% 0 50% 50%;
+      opacity: 0.9;
+      animation: petalFall linear forwards;
+    }
+
+    @keyframes petalFall {
+      from {
+        transform: translate3d(0, -10%, 0) rotate(0deg);
+        opacity: 0.9;
+      }
+      to {
+        transform: translate3d(var(--drift, 0px), 120%, 0) rotate(320deg);
+        opacity: 0;
       }
     }
 
@@ -1685,6 +1943,10 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
+
+      #floatingOrnaments {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -1699,6 +1961,12 @@
     class="scroll-progress-bar"
     id="scrollProgressBar"
   ></div>
+
+  <!-- ==============================
+       FLOATING ORNAMENTS (populated by JS)
+  ============================== -->
+
+  <div id="floatingOrnaments" aria-hidden="true"></div>
 
 
   <!-- ==============================
@@ -1862,7 +2130,7 @@
     id="hero"
   >
 
-    <div class="hero-bg-watermark">
+    <div class="hero-bg-watermark" id="heroWatermark">
       A&amp;M
     </div>
 
@@ -1898,6 +2166,11 @@
 
     </div>
 
+    <button type="button" class="scroll-cue" id="scrollCue" aria-label="Scroll to explore">
+      <span>Scroll</span>
+      <div class="scroll-cue-arrow"></div>
+    </button>
+
   </header>
 
 
@@ -1912,7 +2185,7 @@
 
     <div class="container container-narrow reveal-item">
 
-      <div class="verse-arabic">
+      <div class="verse-arabic" id="verseArabic">
         وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
       </div>
 
@@ -1962,7 +2235,7 @@
 
         <div class="couple-card reveal-item">
 
-          <div class="couple-portrait-wrapper">
+          <div class="couple-portrait-wrapper" data-tilt>
 
             <div class="couple-portrait-placeholder">
 
@@ -2014,7 +2287,7 @@
 
         <div class="couple-card reveal-item">
 
-          <div class="couple-portrait-wrapper">
+          <div class="couple-portrait-wrapper" data-tilt>
 
             <div class="couple-portrait-placeholder">
 
@@ -2687,6 +2960,8 @@
 
         </div>
 
+        <div class="petal-burst" id="petalBurst" aria-hidden="true"></div>
+
       </div>
 
     </div>
@@ -2741,6 +3016,9 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+
+      const reducedMotion =
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       /* ==============================
          ELEMENTS
@@ -2836,8 +3114,12 @@
 
 
       /* ==============================
-         SCROLL PROGRESS
+         SCROLL PROGRESS + PARALLAX
       ============================== */
+
+      const heroWatermark = document.getElementById("heroWatermark");
+      const verseArabic = document.getElementById("verseArabic");
+      const scrollCue = document.getElementById("scrollCue");
 
       function updateScrollUI() {
 
@@ -2867,6 +3149,22 @@
 
         }
 
+        if (!reducedMotion) {
+          if (heroWatermark) {
+            heroWatermark.style.transform =
+              "translate(-50%, calc(-50% + " + (scrollTop * 0.12) + "px))";
+          }
+          if (verseArabic) {
+            const rect = verseArabic.getBoundingClientRect();
+            const offset = (window.innerHeight / 2 - rect.top - rect.height / 2) * 0.04;
+            verseArabic.style.transform = "translateY(" + offset + "px)";
+          }
+        }
+
+        if (scrollCue) {
+          scrollCue.classList.toggle("is-hidden", scrollTop > 120);
+        }
+
       }
 
 
@@ -2878,9 +3176,16 @@
 
       updateScrollUI();
 
+      if (scrollCue) {
+        scrollCue.addEventListener("click", () => {
+          const verseSection = document.getElementById("verse");
+          verseSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+
 
       /* ==============================
-         REVEAL ANIMATION
+         REVEAL ANIMATION (staggered)
       ============================== */
 
       const revealItems =
@@ -2888,6 +3193,8 @@
           ".reveal-item"
         );
 
+      /* Group siblings that reveal together so we can stagger them */
+      const groupCounters = new WeakMap();
 
       const observer =
         new IntersectionObserver(
@@ -2897,9 +3204,21 @@
 
               if (entry.isIntersecting) {
 
+                const parent = entry.target.parentElement;
+                const groupSiblings = parent
+                  ? Array.from(parent.children).filter((el) => el.classList.contains("reveal-item"))
+                  : [entry.target];
+                const indexInGroup = groupSiblings.indexOf(entry.target);
+                const delay = reducedMotion ? 0 : Math.max(0, indexInGroup) * 120;
+
+                entry.target.style.transitionDelay = delay + "ms";
+
                 entry.target.classList.add(
                   "is-revealed"
                 );
+
+                const divider = entry.target.querySelector?.(".section-divider");
+                if (divider) divider.classList.add("is-revealed");
 
                 observer.unobserve(
                   entry.target
@@ -2919,6 +3238,104 @@
       revealItems.forEach((item) => {
         observer.observe(item);
       });
+
+      /* Also stagger the couple-grid and countdown-grid children directly */
+      document.querySelectorAll(".couple-grid > .reveal-item").forEach((el, i) => {
+        if (!reducedMotion) el.style.transitionDelay = (i * 150) + "ms";
+      });
+
+
+      /* ==============================
+         FLOATING ORNAMENTS
+      ============================== */
+
+      const ornamentsLayer = document.getElementById("floatingOrnaments");
+
+      if (ornamentsLayer && !reducedMotion) {
+
+        const glyphs = ["✦", "❀", "✧"];
+        const ornamentCount = window.innerWidth < 600 ? 8 : 14;
+
+        for (let i = 0; i < ornamentCount; i++) {
+
+          const el = document.createElement("div");
+          const isSparkle = i % 3 === 0;
+
+          el.className = isSparkle ? "ornament sparkle" : "ornament";
+
+          const size = isSparkle ? (12 + Math.random() * 10) : (4 + Math.random() * 6);
+          const left = Math.random() * 100;
+          const duration = 18 + Math.random() * 22;
+          const delay = Math.random() * -30;
+
+          if (isSparkle) {
+            el.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+            el.style.fontSize = size + "px";
+          } else {
+            el.style.width = size + "px";
+            el.style.height = size + "px";
+          }
+
+          el.style.left = left + "vw";
+          el.style.animationDuration = duration + "s";
+          el.style.animationDelay = delay + "s";
+
+          ornamentsLayer.appendChild(el);
+
+        }
+
+      }
+
+
+      /* ==============================
+         MAGNETIC BUTTONS
+      ============================== */
+
+      if (!reducedMotion && window.matchMedia("(hover: hover)").matches) {
+
+        document.querySelectorAll(".btn-lux").forEach((btn) => {
+
+          btn.addEventListener("mousemove", (e) => {
+            const rect = btn.getBoundingClientRect();
+            const relX = (e.clientX - rect.left - rect.width / 2) * 0.18;
+            const relY = (e.clientY - rect.top - rect.height / 2) * 0.35;
+            btn.style.transform = "translate(" + relX + "px, " + (relY - 2) + "px)";
+          });
+
+          btn.addEventListener("mouseleave", () => {
+            btn.style.transform = "";
+          });
+
+        });
+
+      }
+
+
+      /* ==============================
+         PORTRAIT TILT
+      ============================== */
+
+      if (!reducedMotion && window.matchMedia("(hover: hover)").matches) {
+
+        document.querySelectorAll("[data-tilt]").forEach((card) => {
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const px = (e.clientX - rect.left) / rect.width - 0.5;
+            const py = (e.clientY - rect.top) / rect.height - 0.5;
+            const rotateX = (-py * 12).toFixed(2);
+            const rotateY = (px * 14).toFixed(2);
+            card.style.transform =
+              "perspective(700px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) scale(1.03)";
+          });
+
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)";
+          });
+
+        });
+
+      }
 
 
       /* ==============================
@@ -3106,6 +3523,18 @@
           "countdownFinishedText"
         );
 
+      function setCountdownValue(el, value) {
+        const formatted = String(value).padStart(2, "0");
+        if (el.textContent !== formatted) {
+          el.textContent = formatted;
+          if (!reducedMotion) {
+            el.classList.remove("tick");
+            void el.offsetWidth;
+            el.classList.add("tick");
+          }
+        }
+      }
+
 
       function updateCountdown() {
 
@@ -3160,17 +3589,10 @@
           );
 
 
-        cdDays.textContent =
-          String(days).padStart(2, "0");
-
-        cdHours.textContent =
-          String(hours).padStart(2, "0");
-
-        cdMinutes.textContent =
-          String(minutes).padStart(2, "0");
-
-        cdSeconds.textContent =
-          String(seconds).padStart(2, "0");
+        setCountdownValue(cdDays, days);
+        setCountdownValue(cdHours, hours);
+        setCountdownValue(cdMinutes, minutes);
+        setCountdownValue(cdSeconds, seconds);
 
       }
 
@@ -3216,6 +3638,46 @@
       yesLabel.addEventListener("click", syncAttendanceState);
       noLabel.addEventListener("click", syncAttendanceState);
       syncAttendanceState();
+
+
+      /* ==============================
+         PETAL BURST (RSVP success)
+      ============================== */
+
+      function launchPetalBurst() {
+
+        const layer = document.getElementById("petalBurst");
+        if (!layer || reducedMotion) return;
+
+        const colors = ["#C5A467", "#DDA8B4", "#8F723D", "#E0C794"];
+        const pieceCount = 26;
+
+        for (let i = 0; i < pieceCount; i++) {
+
+          const piece = document.createElement("div");
+          piece.className = "petal-piece";
+
+          const size = 6 + Math.random() * 8;
+          const left = Math.random() * 100;
+          const duration = 2.4 + Math.random() * 2;
+          const delay = Math.random() * 0.6;
+          const drift = (Math.random() - 0.5) * 140;
+
+          piece.style.left = left + "%";
+          piece.style.width = size + "px";
+          piece.style.height = size + "px";
+          piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+          piece.style.animationDuration = duration + "s";
+          piece.style.animationDelay = delay + "s";
+          piece.style.setProperty("--drift", drift + "px");
+
+          layer.appendChild(piece);
+
+          setTimeout(() => piece.remove(), (duration + delay) * 1000 + 200);
+
+        }
+
+      }
 
 
       /* ==============================
@@ -3349,6 +3811,8 @@
               successMessage.classList.add(
                 "is-visible"
               );
+
+              launchPetalBurst();
 
               return;
 
