@@ -133,10 +133,14 @@
       --ivory: #FCFAF7;
       --white: #FFFFFF;
 
-      --gold-muted: #C5A467;
-      --gold-light: #E0C794;
-      --gold-dark: #8F723D;
-      --gold-border: rgba(197, 164, 103, 0.28);
+      --gold-muted: #A77A2F;
+      --gold-light: #C9A45A;
+      --gold-dark: #6E4D1C;
+      --gold-border: rgba(167, 122, 47, 0.34);
+      --ottoman-teal: #315C58;
+      --ottoman-teal-deep: #193B39;
+      --persian-blue: #394A68;
+      --tile-ink: rgba(49, 92, 88, 0.13);
 
       --font-arabic: "Amiri", serif;
       --font-display: "Cormorant Garamond", Georgia, serif;
@@ -1489,7 +1493,7 @@
       padding: 1.1rem 1.25rem;
       border-top: 1px solid rgba(197, 164, 103, 0.68);
       border-bottom: 1px solid rgba(197, 164, 103, 0.68);
-      background: rgba(42, 8, 18, 0.2);
+      background: rgba(117, 24, 52, 0.2);
       color: var(--gold-light);
       font-family: var(--font-subhead);
       font-size: 0.65rem;
@@ -2022,10 +2026,333 @@
         display: none;
       }
     }
+
+    /* ===== OTTOMAN / PERSIAN ISLAMIC ORNAMENT ===== */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 4;
+      opacity: 0.28;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(49,92,88,.04), transparent 42%),
+        repeating-conic-gradient(
+          from 22.5deg at 50% 50%,
+          rgba(49,92,88,.025) 0deg 22.5deg,
+          transparent 22.5deg 45deg
+        );
+      mix-blend-mode: multiply;
+    }
+
+    section { position: relative; }
+
+    section::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: min(92%, 920px);
+      height: 9px;
+      transform: translateX(-50%);
+      opacity: .28;
+      background:
+        linear-gradient(90deg, transparent, var(--gold-muted), transparent) center / 100% 1px no-repeat,
+        repeating-linear-gradient(45deg, transparent 0 9px, var(--tile-ink) 9px 10px, transparent 10px 18px);
+      pointer-events: none;
+    }
+
+    .hero-section::before {
+      content: "۞";
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+      width: clamp(180px, 26vw, 330px);
+      height: clamp(180px, 26vw, 330px);
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(167,122,47,.15);
+      border-radius: 50%;
+      color: rgba(167,122,47,.13);
+      font-family: var(--font-arabic);
+      font-size: clamp(5rem, 11vw, 9rem);
+      background: repeating-conic-gradient(
+        from 22.5deg,
+        rgba(49,92,88,.035) 0deg 22.5deg,
+        transparent 22.5deg 45deg
+      );
+      box-shadow: 0 0 0 12px rgba(167,122,47,.025), 0 0 0 24px rgba(49,92,88,.02);
+      pointer-events: none;
+      z-index: 0;
+      animation: shamsaFloat 10s ease-in-out infinite;
+    }
+
+    @keyframes shamsaFloat {
+      0%,100% { transform: translateX(-50%) rotate(0deg) scale(1); }
+      50% { transform: translateX(-50%) rotate(8deg) scale(1.025); }
+    }
+
+    .hero-meta-badge {
+      border-left: 1px solid rgba(49,92,88,.16);
+      border-right: 1px solid rgba(49,92,88,.16);
+      box-shadow: inset 0 1px 0 rgba(167,122,47,.1), inset 0 -1px 0 rgba(167,122,47,.1);
+    }
+
+    .event-featured-card,
+    .venue-card-wrapper,
+    .rsvp-card {
+      isolation: isolate;
+    }
+
+    .event-featured-card > .event-content,
+    .venue-card-wrapper > *,
+    .rsvp-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .event-featured-card {
+      background:
+        radial-gradient(circle at 50% 10%, rgba(167,122,47,.055), transparent 42%),
+        repeating-conic-gradient(
+          from 22.5deg at 50% 50%,
+          rgba(49,92,88,.022) 0deg 22.5deg,
+          transparent 22.5deg 45deg
+        ),
+        rgba(250,243,238,.78);
+    }
+
+    .event-featured-card::before {
+      height: 7px;
+      background: linear-gradient(
+        90deg,
+        var(--ottoman-teal-deep),
+        var(--gold-muted) 18%,
+        var(--gold-light) 50%,
+        var(--gold-muted) 82%,
+        var(--ottoman-teal-deep)
+      );
+    }
+
+    .event-featured-card::after,
+    .venue-card-wrapper::after,
+    .rsvp-card::after {
+      content: "❧";
+      position: absolute;
+      right: 18px;
+      bottom: 12px;
+      color: rgba(167,122,47,.38);
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      transform: rotate(-18deg);
+      pointer-events: none;
+    }
+
+    /* Mihrab-inspired portrait framing */
+    .couple-portrait-wrapper {
+      border-radius: 52% 52% 18px 18px / 34% 34% 18px 18px;
+      border-color: rgba(167,122,47,.55);
+      box-shadow:
+        0 20px 45px rgba(42,8,18,.13),
+        0 0 0 7px rgba(167,122,47,.035),
+        0 0 0 8px rgba(49,92,88,.08);
+    }
+
+    .couple-portrait-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border: 1px solid rgba(201,164,90,.48);
+      border-radius: 50% 50% 12px 12px / 30% 30% 12px 12px;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .couple-portrait-wrapper::after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      top: 6px;
+      transform: translateX(-50%);
+      color: rgba(201,164,90,.78);
+      font-size: .75rem;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    /* Persian geometric medallion */
+    .monogram-circle {
+      position: relative;
+      border-color: var(--gold-dark);
+      box-shadow:
+        0 0 0 7px rgba(167,122,47,.035),
+        0 0 0 8px rgba(49,92,88,.13),
+        var(--shadow-subtle);
+    }
+
+    .monogram-circle::before,
+    .monogram-circle::after {
+      content: "";
+      position: absolute;
+      inset: -12px;
+      border: 1px solid rgba(167,122,47,.16);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+
+    .monogram-circle::after {
+      inset: -8px;
+      transform: rotate(22.5deg);
+      border-color: rgba(49,92,88,.11);
+    }
+
+    /* Ottoman/Persian tile texture on deep sections */
+    .verse-section,
+    .countdown-section,
+    .closing-section {
+      background-color: var(--wine-deep);
+/* background-color: #f6f0e4; */
+background-image:
+  radial-gradient(
+    circle at 50% 15%,
+    rgba(167, 122, 47, 0.10),
+    transparent 42%
+  ),
+  linear-gradient(
+    45deg,
+    transparent 46%,
+    rgba(167, 122, 47, 0.055) 47%,
+    rgba(167, 122, 47, 0.055) 53%,
+    transparent 54%
+  ),
+  linear-gradient(
+    -45deg,
+    transparent 46%,
+    rgba(167, 122, 47, 0.055) 47%,
+    rgba(167, 122, 47, 0.055) 53%,
+    transparent 54%
+  );
+
+background-size:
+  100% 100%,
+  56px 56px,
+  56px 56px;
+    }
+
+    .verse-section::before,
+    .countdown-section::before,
+    .closing-section::before {
+      content: "۞";
+      position: absolute;
+      left: 50%;
+      top: 22px;
+      transform: translateX(-50%);
+      color: rgba(201,164,90,.13);
+      font-family: var(--font-arabic);
+      font-size: 2.4rem;
+      pointer-events: none;
+    }
+
+    /* Persian-inspired scratch surface */
+    .event-scratch-overlay {
+      background:
+        radial-gradient(circle at 50% 20%, rgba(49,92,88,.22), transparent 48%),
+        repeating-conic-gradient(
+          from 22.5deg at 50% 50%,
+          rgba(201,164,90,.035) 0deg 22.5deg,
+          transparent 22.5deg 45deg
+        );
+    }
+
+    .event-scratch-hint {
+      border-left: 1px solid rgba(201,164,90,.36);
+      border-right: 1px solid rgba(201,164,90,.36);
+      background: linear-gradient(
+        90deg,
+        rgba(25,59,57,.14),
+        rgba(42,8,18,.24),
+        rgba(25,59,57,.14)
+      );
+    }
+
+    .section-eyebrow::before {
+      content: "✦";
+      display: inline-block;
+      margin-right: .55rem;
+      color: var(--ottoman-teal);
+      font-size: .68em;
+    }
+
+    .islamic-ornament-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 6;
+      overflow: hidden;
+    }
+
+    .ornament-corner {
+      position: absolute;
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      color: rgba(167,122,47,.15);
+      font-family: var(--font-arabic);
+      font-size: 2rem;
+      border: 1px solid rgba(167,122,47,.11);
+      background: repeating-conic-gradient(
+        from 22.5deg,
+        rgba(49,92,88,.045) 0deg 22.5deg,
+        transparent 22.5deg 45deg
+      );
+      transform: rotate(45deg);
+    }
+
+    .ornament-corner-tl { top: 20px; left: -38px; }
+    .ornament-corner-tr { top: 20px; right: -38px; }
+    .ornament-corner-bl { bottom: 20px; left: -38px; }
+    .ornament-corner-br { bottom: 20px; right: -38px; }
+
+    @media (max-width:600px) {
+      section::after { width:84%; opacity:.22; }
+      .hero-section::before {
+        top:12%;
+        width:170px;
+        height:170px;
+        font-size:5rem;
+      }
+      .event-featured-card::after,
+      .venue-card-wrapper::after,
+      .rsvp-card::after {
+        font-size:1.6rem;
+        right:12px;
+        bottom:8px;
+      }
+      .ornament-corner { width:56px; height:56px; font-size:1.45rem; }
+      .ornament-corner-tl,.ornament-corner-tr { top:14px; }
+      .ornament-corner-bl,.ornament-corner-br { bottom:14px; }
+      .ornament-corner-tl,.ornament-corner-bl { left:-29px; }
+      .ornament-corner-tr,.ornament-corner-br { right:-29px; }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .hero-section::before { animation:none; }
+      .islamic-ornament-layer { display:none; }
+    }
+
   </style>
 </head>
 
 <body class="locked">
+  <div class="islamic-ornament-layer" aria-hidden="true">
+    <span class="ornament-corner ornament-corner-tl">۞</span>
+    <span class="ornament-corner ornament-corner-tr">۞</span>
+    <span class="ornament-corner ornament-corner-bl">۞</span>
+    <span class="ornament-corner ornament-corner-br">۞</span>
+  </div>
 
   <!-- ==============================
        SCROLL PROGRESS
@@ -2114,13 +2441,6 @@
 
       </div>
 
-      <!-- <div class="veil-event">
-        Dawat-e-Walima
-      </div>
-
-      <div class="veil-date">
-        Tuesday, 24th November 2026
-      </div> -->
 
       <button
         type="button"
