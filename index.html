@@ -1968,6 +1968,189 @@
       text-transform: uppercase;
     }
 
+
+
+    /* ==============================
+       FAMILY CONTACTS — PERSIAN CARD
+    ============================== */
+
+    .family-contacts-section {
+      padding: clamp(5.5rem, 10vh, 8rem) 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(167,122,47,.11), transparent 48%),
+        linear-gradient(180deg, #F3E5E1 0%, #E9D9D4 100%);
+    }
+
+    .family-contacts-section::before {
+      content: "";
+      position: absolute;
+      inset: 24px 5%;
+      border: 1px solid rgba(167,122,47,.13);
+      pointer-events: none;
+    }
+
+    .family-contacts-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .family-contacts-heading .section-title {
+      margin-bottom: .9rem;
+    }
+
+    .family-contacts-heading .section-desc {
+      max-width: 600px;
+    }
+
+    .family-contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.35rem;
+      max-width: 980px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .family-contact-card {
+      position: relative;
+      overflow: hidden;
+      padding: 2.2rem 1.5rem 1.7rem;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(201,164,90,.09), transparent 44%),
+        rgba(250,243,238,.82);
+      border: 1px solid var(--gold-border);
+      box-shadow: 0 18px 45px rgba(42,8,18,.09);
+      transition: transform .45s var(--ease-luxury), box-shadow .45s var(--ease-luxury);
+    }
+
+    .family-contact-card::before {
+      content: "۞";
+      position: absolute;
+      top: 9px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(167,122,47,.34);
+      font-family: var(--font-arabic);
+      font-size: 1rem;
+    }
+
+    .family-contact-card::after {
+      content: "❧";
+      position: absolute;
+      right: 10px;
+      bottom: 4px;
+      color: rgba(167,122,47,.28);
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      transform: rotate(-18deg);
+      pointer-events: none;
+    }
+
+    .family-contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 60px rgba(42,8,18,.15);
+    }
+
+    .family-contact-symbol {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(167,122,47,.52);
+      color: var(--gold-dark);
+      background: rgba(49,92,88,.045);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      transform: rotate(45deg);
+    }
+
+    .family-contact-symbol span {
+      transform: rotate(-45deg);
+    }
+
+    .family-contact-role {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--gold-muted);
+      font-family: var(--font-subhead);
+      font-size: .62rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+
+    .family-contact-name {
+      margin-bottom: 1.25rem;
+      color: var(--wine-rich);
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .family-contact-number {
+      display: block;
+      margin-bottom: 1.2rem;
+      color: rgba(42,8,18,.72);
+      font-size: .84rem;
+      letter-spacing: .08em;
+    }
+
+    .family-contact-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .55rem;
+    }
+
+    .family-contact-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      min-height: 42px;
+      padding: .65rem .5rem;
+      border: 1px solid rgba(167,122,47,.35);
+      color: var(--wine-rich);
+      background: rgba(255,255,255,.34);
+      font-family: var(--font-subhead);
+      font-size: .58rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: all .35s var(--ease-luxury);
+    }
+
+    .family-contact-action:hover {
+      color: var(--ivory);
+      border-color: var(--wine-rich);
+      background: var(--wine-rich);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 800px) {
+      .family-contacts-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .family-contacts-section::before {
+        inset: 18px 1rem;
+      }
+
+      .family-contact-card {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+    }
+
     /* ==============================
        MOBILE
     ============================== */
@@ -3010,6 +3193,74 @@ background-size:
   </section>
 
 
+
+
+
+
+  <!-- ==============================
+       FAMILY CONTACTS
+  ============================== -->
+
+  <section
+    class="family-contacts-section"
+    id="family-contacts"
+  >
+
+    <div class="container">
+
+      <div class="family-contacts-heading reveal-item">
+        <span class="section-eyebrow">Family &amp; Assistance</span>
+        <h2 class="section-title">For Any Assistance</h2>
+        <p class="section-desc">
+          For any questions regarding the invitation or the venue, please feel free to get in touch.
+        </p>
+        <div class="section-divider">
+          <span class="line"></span>
+          <span class="symbol">✦</span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="family-contacts-grid">
+
+        <article class="family-contact-card reveal-item">
+          <div class="family-contact-symbol"><span>A</span></div>
+          <span class="family-contact-role">Family Contact</span>
+          <h3 class="family-contact-name">Arif Ansari</h3>
+          <a class="family-contact-number" href="tel:+917021052535">+91 70210 52535</a>
+          <div class="family-contact-actions">
+            <a class="family-contact-action" href="tel:+917021052535" aria-label="Call Arif Ansari">☎ Call</a>
+            <a class="family-contact-action" href="https://wa.me/917021052535" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Arif Ansari">WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="family-contact-card reveal-item">
+          <div class="family-contact-symbol"><span>S</span></div>
+          <span class="family-contact-role">Family Contact</span>
+          <h3 class="family-contact-name">Shariq Ansari</h3>
+          <a class="family-contact-number" href="tel:+919594620281">+91 95946 20281</a>
+          <div class="family-contact-actions">
+            <a class="family-contact-action" href="tel:+919594620281" aria-label="Call Shariq Ansari">☎ Call</a>
+            <a class="family-contact-action" href="https://wa.me/919594620281" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Shariq Ansari">WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="family-contact-card reveal-item">
+          <div class="family-contact-symbol"><span>S</span></div>
+          <span class="family-contact-role">Family Contact</span>
+          <h3 class="family-contact-name">Shahbaz Ansari</h3>
+          <a class="family-contact-number" href="tel:+919022369041">+91 90223 69041</a>
+          <div class="family-contact-actions">
+            <a class="family-contact-action" href="tel:+919022369041" aria-label="Call Shahbaz Ansari">☎ Call</a>
+            <a class="family-contact-action" href="https://wa.me/919022369041" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Shahbaz Ansari">WhatsApp</a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
   <!-- ==============================
