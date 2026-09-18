@@ -3167,7 +3167,7 @@ background-size:
           </p>
 
           <a
-            href="https://maps.app.goo.gl/ou72w28b6ZxM2JJ99"
+            href="https://maps.app.goo.gl/bFrLtAwSL8BxEXt96"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-lux btn-lux-filled"
@@ -3893,36 +3893,11 @@ background-size:
          RSVP RADIO CONTROLS
       ============================== */
 
-      const yesLabel =
-        document.getElementById(
-          "attendingYesLabel"
-        );
 
       const noLabel =
         document.getElementById(
           "attendingNoLabel"
         );
-
-      function syncAttendanceState() {
-
-        const selected =
-          document.querySelector(
-            'input[name="Attending Status"]:checked'
-          );
-
-        const isYes =
-          selected?.value === "Accepts with Joy";
-
-        yesLabel.classList.toggle("active", isYes);
-        noLabel.classList.toggle("active", !isYes);
-
-      }
-
-
-      yesLabel.addEventListener("click", syncAttendanceState);
-      noLabel.addEventListener("click", syncAttendanceState);
-      syncAttendanceState();
-
 
       /* ==============================
          PETAL BURST (RSVP success)
@@ -3962,177 +3937,6 @@ background-size:
         }
 
       }
-
-
-      /* ==============================
-         RSVP FORM
-         
-         PRIMARY:
-         shaans7891@gmail.com
-
-         CC:
-         shaans7892@gmail.com
-      ============================== */
-
-      const rsvpForm =
-        document.getElementById(
-          "weddingRsvpForm"
-        );
-
-      const formContainer =
-        document.getElementById(
-          "rsvpFormContainer"
-        );
-
-      const successMessage =
-        document.getElementById(
-          "rsvpSuccessMessage"
-        );
-
-      const submitBtn =
-        document.getElementById(
-          "submitBtn"
-        );
-
-      const submitLoader =
-        document.getElementById(
-          "submitLoader"
-        );
-
-      const errorMessage =
-        document.getElementById(
-          "rsvpErrorMessage"
-        );
-
-
-      rsvpForm.addEventListener(
-        "submit",
-        async (e) => {
-
-          e.preventDefault();
-
-
-          /* Hide previous error */
-
-          errorMessage.classList.remove(
-            "is-visible"
-          );
-
-
-          /* Validate */
-
-          if (!rsvpForm.checkValidity()) {
-
-            rsvpForm.reportValidity();
-
-            return;
-
-          }
-
-
-          /* Loading state */
-
-          submitBtn.disabled = true;
-
-          submitBtn.style.opacity = "0.6";
-
-          submitLoader.style.display =
-            "block";
-
-
-          const formData =
-            new FormData(rsvpForm);
-
-
-          try {
-
-            const response =
-              await fetch(
-                "https://formsubmit.co/ajax/shaans7891@gmail.com",
-                {
-                  method: "POST",
-
-                  headers: {
-                    "Accept":
-                      "application/json"
-                  },
-
-                  body: formData
-                }
-              );
-
-
-            let result = null;
-
-
-            try {
-
-              result =
-                await response.json();
-
-            } catch (_) {
-
-              result = null;
-
-            }
-
-
-            /*
-              Only show success if
-              FormSubmit actually responds
-              successfully.
-            */
-
-            if (
-              response.ok &&
-              (!result ||
-                result.success !== false)
-            ) {
-
-              formContainer.style.display =
-                "none";
-
-              successMessage.classList.add(
-                "is-visible"
-              );
-
-              launchPetalBurst();
-
-              return;
-
-            }
-
-
-            throw new Error(
-              result?.message ||
-              "RSVP submission failed."
-            );
-
-
-          } catch (error) {
-
-            console.error(
-              "RSVP submission error:",
-              error
-            );
-
-
-            submitBtn.disabled = false;
-
-            submitBtn.style.opacity = "1";
-
-            submitLoader.style.display =
-              "none";
-
-
-            errorMessage.classList.add(
-              "is-visible"
-            );
-
-          }
-
-        }
-      );
 
 
       /* ==============================
